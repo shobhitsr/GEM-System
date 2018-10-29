@@ -28,7 +28,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
-            <li><a href="#">Page 2</a></li>
+            <li><a href="Create_New_Location.php">Create Location</a></li>
             <li><a href="#">Page 3</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>
         </ul>
