@@ -27,7 +27,7 @@
             <li><a href="HomePage.php">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
             <li class="active"><a href="Create_New_Location.php">Create Location</a></li>
-            <li><a href="#">Page 3</a></li>
+            <li><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>
         </ul>
         </div> 

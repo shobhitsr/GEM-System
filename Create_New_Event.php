@@ -25,37 +25,35 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
-            <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="Create_New_Artist.php">Create Artist</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
-            <li><a href="Create_New_Event.php">Create Event</a></li>
+            <li class="active"><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>
         </ul>
-        </div>
+        </div> 
     </nav>
 
     <center>
-        <h1>Create Artist Record</h1>
+        <h1>Create New Event</h1>
     </center>
-    <form action="New_Artist_Notification.php" method="POST">
+    <form action="New_Event_Notification.php" method="POST">
     <div class="panel panel-default">
-        <div class="panel-heading"><b>Artist Information</b></div>
+        <div class="panel-heading"><b>Event Information</b></div>
         <div class="panel-body">
         
         <fieldset class="col-md-4" style="display:inline-block;">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td class="left-column">First name : </td><td style="text-align:right"><input type="text" size="23" name="firstname"></td></tr>
-                        <tr><td class="left-column">Last name : </td><td style="text-align:right"><input type="text" size="23" name="lastname"></td></tr>
+                        <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" size="23" name="performer"></td></tr>
                         <tr><td><br/></td></tr>
-                        <tr><td class="left-column">Address : </td><td class="left-column">Apt. # : <input type="text" name="apt_no"></td></tr>
-                        <tr><td></td><td class="left-column">Street : <input type="text" name="street"></td></tr>
-                        <tr><td></td><td class="left-column">City : <input type="text" name="city"></td></tr>
-                        <tr><td></td><td class="left-column">State : <input type="text" name="state"></td></tr>
-                        <tr><td></td><td class="left-column">Country : <input type="text" name="country"></td></tr>
-                        <tr><td></td><td class="left-column">ZIP : <input type="text" name="zipcode"></td></tr>
-                        <tr><td><br/></td></tr>
-                        <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" size="23"></td></tr>
+                        <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" size="23" name="location"></td></tr>
+                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" size="23" name="date"></td></tr>
+                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time" size="23"></td></tr>
+                        <tr><td class="left-column">Status : </td><td style="text-align:right"><input type="text" size="23" name="status"></td></tr>
+                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" size="23" name="capacity"></td></tr>
+                        <tr><td class="left-column">Event Manager : </td><td style="text-align:right"><input type="text" size="23" name="manager"></td></tr>
+                        <tr><td class="left-column">Notes: </td><td style="text-align:right"><input type="text" size="23" name="notes"></td></tr>
                         <tr><td><br/></td></tr>
                     
                         <tr>

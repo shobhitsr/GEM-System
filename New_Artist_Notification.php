@@ -18,7 +18,7 @@
                 <li ><a href="HomePage.php">Home</a></li>
                 <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
                 <li><a href="Create_New_Location.php">Create Location</a></li>
-                <li><a href="#">Page 3</a></li>
+                <li><a href="Create_New_Event.php">Create Event</a></li>
                 <li><a href="Logout.php" tile="Logout">Logout</a></li>
             </ul>
             </div>
@@ -28,7 +28,7 @@
          </center>
         Welcome
         <?php echo $_POST["firstname"];?> <?php echo $_POST["lastname"]; ?>
-        <br> Your address is <?php echo $_POST["apt_no"];?> <?php echo $_POST["street"];?> <?php echo $_POST["city"];?> 
+        <br> Your address is: <?php echo $_POST["apt_no"];?> <?php echo $_POST["street"];?> <?php echo $_POST["city"];?> 
         <?php echo $_POST["state"];?> <?php echo $_POST["country"];?> <?php echo $_POST["zipcode"];?>
         <br> Your email address is: <?php echo $_POST["email"]; ?>
 

@@ -17,24 +17,24 @@
             <ul class="nav navbar-nav">
                 <li ><a href="HomePage.php">Home</a></li>
                 <li><a href="Create_New_Artist.php">Create Artist</a></li>
-                <li class="active"><a href="Create_New_Location.php">Create Location</a></li>
-                <li><a href="Create_New_Event.php">Create Event</a></li>
+                <li><a href="Create_New_Location.php">Create Location</a></li>
+                <li class="active"><a href="Create_New_Event.php">Create Event</a></li>
                 <li><a href="Logout.php" tile="Logout">Logout</a></li>
             </ul>
             </div>
         </nav>
         <center>
-        <h1>New Location created</h1>
+        <h1>New Event created</h1>
          </center>
         Welcome
-        <?php echo $_POST["name"]; ?>
-        <br> Your address is: <?php echo $_POST["apt_no"];?> <?php echo $_POST["street"];?> <?php echo $_POST["city"];?> 
-        <?php echo $_POST["state"];?> <?php echo $_POST["country"];?> <?php echo $_POST["zipcode"];?>
-        <br> Your contact is: <?php echo $_POST["contactname"];?>
-        <br> Their email address is: <?php echo $_POST["email"]; ?>
-        <br> Their office phone # is: <?php echo $_POST["officephone"]; ?>
-        <br> Their cell phone # is: <?php echo $_POST["cellphone"]; ?>
-        <br> The seating capacity is: <?php echo $_POST["capacity"]; ?>
+        <br>Your performer(s) is/are: <?php echo $_POST["performer"]; ?>
+        <br> Your location is: <?php echo $_POST["location"];?>
+        <br> Your date is: <?php echo $_POST["date"];?>
+        <br> Your time is: <?php echo $_POST["time"]; ?>
+        <br> Your status is: <?php echo $_POST["status"]; ?>
+        <br> Your seating capacity is: <?php echo $_POST["capacity"]; ?>
+        <br> The event manager is: <?php echo $_POST["manager"]; ?>
+        <br> Here are your notes: <?php echo $_POST["notes"]; ?>
 
         <br><br><a href="HomePage.php"><button type="submit">Return to Home Page</button></a>
         
