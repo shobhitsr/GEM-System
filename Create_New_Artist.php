@@ -24,8 +24,8 @@
             <a class="navbar-brand" href="#">Global Entertainment Incorporated</a>
         </div>
         <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="#">Home</a></li>
+            <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
             <li><a href="#">Page 2</a></li>
             <li><a href="#">Page 3</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>

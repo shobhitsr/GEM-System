@@ -16,7 +16,7 @@
             </div>
             <ul class="nav navbar-nav">
                 <li ><a href="HomePage.php">Home</a></li>
-                <li class="active"><a href="#">Create Artist</a></li>
+                <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
                 <li><a href="#">Page 2</a></li>
                 <li><a href="#">Page 3</a></li>
                 <li><a href="Logout.php" tile="Logout">Logout</a></li>
@@ -32,6 +32,8 @@
         <?php echo $_POST["state"];?> <?php echo $_POST["country"];?> <?php echo $_POST["zipcode"];?>
         <br> Your email address is: <?php echo $_POST["email"]; ?>
 
+        <br><br><a href="HomePage.php"><button type="submit">Return to Home Page</button></a>
+        
     </body>
 
 </html>
