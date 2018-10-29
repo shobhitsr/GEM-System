@@ -28,6 +28,7 @@
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li class="active"><a href="Create_New_Event.php">Create Event</a></li>
+            <li><a href="Approve_Event.php">Approve Event</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>
         </ul>
         </div> 
@@ -46,7 +47,6 @@
                     <div class="panel-body">
                         <table>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" size="23" name="performer"></td></tr>
-                        <tr><td><br/></td></tr>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" size="23" name="location"></td></tr>
                         <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" size="23" name="date"></td></tr>
                         <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time" size="23"></td></tr>
