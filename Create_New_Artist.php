@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Create Artist Record</title>
+    <title>GEM Systems</title>
     <style>
         .left-column
         {
@@ -18,10 +18,25 @@
 </head>
 
 <body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Global Entertainment Incorporated</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="#">Page 2</a></li>
+            <li><a href="#">Page 3</a></li>
+            <li><a href="Logout.php" tile="Logout">Logout</a></li>
+        </ul>
+        </div>
+    </nav>
+
     <center>
         <h1>Create Artist Record</h1>
     </center>
-    <form action="/~z1808617/CSCI467/New_Artist_Notification.php" method="POST">
+    <form action="New_Artist_Notification.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-heading"><b>Artist Information</b></div>
         <div class="panel-body">
