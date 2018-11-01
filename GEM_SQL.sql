@@ -18,6 +18,7 @@ passenger:
 */
 
 drop table if exists Artist_Record;
+
 create table Artist_Record
     (Artist_ID int auto_increment primary key,
      Artist_FName char(25),
@@ -29,4 +30,7 @@ create table Artist_Record
      Artist_Country char(30),
      Artist_ZIP char(10),
      Artist_Email char(100));
+
+insert into Artist_Record (Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) 
+     values ('Shobhit', 'Srivastava', '12', 'street', '$cty', '$state', '$cont', '$zip', 'abc@example.com');
 

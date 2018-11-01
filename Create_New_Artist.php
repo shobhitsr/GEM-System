@@ -40,7 +40,7 @@
     <?php
         require ('conn.php');
     ?>
-    <form action="New_Artist_Notification.php" method="POST">
+    <form action="Create_New_Artist.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-heading"><b>Artist Information</b></div>
         <div class="panel-body">
@@ -82,24 +82,40 @@
     <?php
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
-            $fname=$_POST['firstname'];
-            $lname=$_POST['lastname'];
-            $apt=$_POST['apt_no'];
-            $st=$_POST['street'];
-            $cty=$_POST['city'];
-            $state=$_POST['state'];
-            $cont=$_POST['country'];
-            $zip=$_POST['zipcode'];
-            $eml=$_POST['email'];
-            $sql="insert into Artist_Record (Artist_ID, Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) values ('$fname', '$lname', '$apt', '$st', '$cty', '$state', '$cont', '$zip', '$eml')";
-        if ($conn->query($sql) == TRUE)
-        {
-            echo "Successfully added a new flight to record";
-        }
-        else
-        {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
+            $fname = $_POST['firstname'];
+            $lname = $_POST['lastname'];
+            $apt = $_POST['apt_no'];
+            $st = $_POST['street'];
+            $cty = $_POST['city'];
+            $state = $_POST['state'];
+            $cont = $_POST['country'];
+            $zip = $_POST['zipcode'];
+            $eml = $_POST['email'];
+            $sql="insert into Artist_Record (Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) values ('$fname', '$lname', '$apt', '$st', '$cty', '$state', '$cont', '$zip', '$eml')";
+            // $new_Artist = $conn->prepare ($sql);
+            // $new_Artist->execute(array(
+            //     fname => $_POST['firstname'],
+            //     lname => $_POST['lastname'],
+            //     apt => $_POST['apt_no'],
+            //     st => $_POST['street'],
+            //     cty => $_POST['city'],
+            //     state => $_POST['state'],
+            //     cont => $_POST['country'],
+            //     zip => $_POST['zipcode'],
+            //     eml => $_POST['email']
+            // ));
+
+            
+            if ($conn->query($sql) == TRUE)
+            {
+                $last_id = $conn->lastInsertId();
+                $get_info = "?success=true&id=".$last_id;
+                header("Location: New_Artist_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
         }
     ?>
 

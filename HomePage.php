@@ -7,7 +7,7 @@
         header("location:HomePage.php");
     // session is true and equals to string
     }
-    require ('conn.php')
+    require ('conn.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,14 +47,14 @@
 -->
     <form action="HomePage.php" method="post">
         <?php
-            $sql1 = "select * from Artist_Record";
-            echo "<br><b> NAME OF ALL THE PASSENGERS : </b><br><br>";
+            $sql1 = "select Artist_FName, Artist_LName from Artist_Record order by Artist_LName";
+            echo "<br><b> NAME OF ALL THE ARTISTS : </b><br><br>";
             foreach($conn->query($sql1) as $row1 )
             {
-             echo $row1['Artist_FName'];
-             echo " ";
-             echo $row1['Artist_LName'];
-             echo '<br>';
+                echo $row1['Artist_FName'];
+                echo " ";
+                echo $row1['Artist_LName'];
+                echo '<br>';
             }
             echo '<br>';
         ?>

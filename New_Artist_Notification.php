@@ -26,12 +26,21 @@
         </nav>
         <center>
         <h1>New Artist created</h1>
-         </center>
-        Welcome
-        <?php echo $_POST["firstname"];?> <?php echo $_POST["lastname"]; ?>
-        <br> Your address is: <?php echo $_POST["apt_no"];?> <?php echo $_POST["street"];?> <?php echo $_POST["city"];?> 
-        <?php echo $_POST["state"];?> <?php echo $_POST["country"];?> <?php echo $_POST["zipcode"];?>
-        <br> Your email address is: <?php echo $_POST["email"]; ?>
+        </center>
+
+        <?php
+            require ('conn.php');
+            $id = intval($_GET['id']);
+            $sql = "select * from Artist_Record where Artist_ID = $id";
+            foreach($conn->query($sql) as $row3)
+            {
+                echo $row3['Artist_FName']." ".$row3['Artist_LName']." has been added to the database"."</br>";
+                echo "There address is: "."</br>";
+                echo $row3['Artist_Apt']." ".$row3['Artist_Street']." ".$row3['Artist_City']." ".$row3['Artist_State']." ".$row3['Artist_Country']." ".$row3['Artist_ZIP'];
+                echo "<br> Your email address is: ".$row3['Artist_Email'];
+            }//end foreach
+
+        ?>
 
         <br><br><a href="HomePage.php"><button type="submit">Return to Home Page</button></a>
         
