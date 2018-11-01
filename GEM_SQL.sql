@@ -29,3 +29,4 @@ create table Artist_Record
      Artist_Country char(30),
      Artist_ZIP char(10),
      Artist_Email char(100));
+

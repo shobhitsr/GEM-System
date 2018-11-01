@@ -7,6 +7,7 @@
         header("location:HomePage.php");
     // session is true and equals to string
     }
+    require ('conn.php')
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -44,6 +45,20 @@
   <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
 </div>
 -->
+    <form action="HomePage.php" method="post">
+        <?php
+            $sql1 = "select * from Artist_Record";
+            echo "<br><b> NAME OF ALL THE PASSENGERS : </b><br><br>";
+            foreach($conn->query($sql1) as $row1 )
+            {
+             echo $row1['Artist_FName'];
+             echo " ";
+             echo $row1['Artist_LName'];
+             echo '<br>';
+            }
+            echo '<br>';
+        ?>
+    </form>
 
 </body>
 </html>
