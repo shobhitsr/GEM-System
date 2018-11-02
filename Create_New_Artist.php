@@ -58,6 +58,7 @@
                         <tr><td></td><td class="left-column">State : <input type="text" name="state" id="state"></td></tr>
                         <tr><td></td><td class="left-column">Country : <input type="text" name="country" id="country"></td></tr>
                         <tr><td></td><td class="left-column">ZIP : <input type="text" name="zipcode" id="zipcode"></td></tr>
+                        <tr><td></td><td class="left-column">Concert Rate:  <input type="text" name="rate" id="rate"></td></tr>
                         <tr><td><br/></td></tr>
                         <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" id="email" size="23"></td></tr>
                         <tr><td><br/></td></tr>
@@ -92,19 +93,6 @@
             $zip = $_POST['zipcode'];
             $eml = $_POST['email'];
             $sql="insert into Artist_Record (Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) values ('$fname', '$lname', '$apt', '$st', '$cty', '$state', '$cont', '$zip', '$eml')";
-            // $new_Artist = $conn->prepare ($sql);
-            // $new_Artist->execute(array(
-            //     fname => $_POST['firstname'],
-            //     lname => $_POST['lastname'],
-            //     apt => $_POST['apt_no'],
-            //     st => $_POST['street'],
-            //     cty => $_POST['city'],
-            //     state => $_POST['state'],
-            //     cont => $_POST['country'],
-            //     zip => $_POST['zipcode'],
-            //     eml => $_POST['email']
-            // ));
-
             
             if ($conn->query($sql) == TRUE)
             {

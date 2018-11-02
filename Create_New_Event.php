@@ -46,6 +46,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
+                        <tr><td class="left-column">Event Name : </td><td style="text-align:right"><input type="text" size="23" name="event"></td></tr>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" size="23" name="performer"></td></tr>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" size="23" name="location"></td></tr>
                         <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" size="23" name="date"></td></tr>
