@@ -29,6 +29,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="#">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="Create_New_Agent.php">Create Agent</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Approve_Event.php">Approve Event</a></li>

@@ -25,8 +25,8 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
-            <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
-            <li><a href="Create_New_Agent.php">Create Agent</a></li>
+            <li><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li class="active"><a href="Create_New_Agent.php">Create Agent</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Approve_Event.php">Approve Event</a></li>
@@ -36,11 +36,8 @@
     </nav>
 
     <center>
-        <h1>Create New Artist</h1>
+        <h1>Create New Agent</h1>
     </center>
-    <?php
-        require ('conn.php');
-    ?>
     <form action="Create_New_Artist.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-heading"><b>Artist Information</b></div>
@@ -81,33 +78,6 @@
         </div>
     </div>
     </form>
-    <?php
-        if ($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
-            $fname = $_POST['firstname'];
-            $lname = $_POST['lastname'];
-            $apt = $_POST['apt_no'];
-            $st = $_POST['street'];
-            $cty = $_POST['city'];
-            $state = $_POST['state'];
-            $cont = $_POST['country'];
-            $zip = $_POST['zipcode'];
-            $eml = $_POST['email'];
-            $sql="insert into Artist_Record (Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) values ('$fname', '$lname', '$apt', '$st', '$cty', '$state', '$cont', '$zip', '$eml')";
-            
-            if ($conn->query($sql) == TRUE)
-            {
-                $last_id = $conn->lastInsertId();
-                $get_info = "?success=true&id=".$last_id;
-                header("Location: New_Artist_Notification.php".$get_info);
-            }
-            else
-            {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        }
-    ?>
-
-</body>
+    </body>
 
 </html>
