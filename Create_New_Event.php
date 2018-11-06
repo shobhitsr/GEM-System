@@ -26,6 +26,7 @@
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="Create_New_Agent.php">Create Agent</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li class="active"><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Approve_Event.php">Approve Event</a></li>
@@ -100,8 +101,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" name="date"></td></tr>
-                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time"></td></tr>
+                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" name="date" placeholder="xx/xx/xxxx"></td></tr>
+                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time" placeholder="xx:xx am/pm"></td></tr>
                         <!-- make this dropdown -->
                         <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
                         </table>
