@@ -84,7 +84,7 @@
                                     '$loc_country',
                                     '$loc_zip',
                                     '$loc_comment'
-                                );";
+                                )";
             if ($conn->query($sql) == TRUE)
             {
                 $last_id = $conn->lastInsertId();
