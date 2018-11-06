@@ -36,65 +36,22 @@
     <center>
         <h1>Approve Events</h1>
     </center>
-    <form action="New_Event_Notification.php" method="POST">
+    <form action="Approval_Notification.php" method="POST">
     <div class="panel panel-default">
-        <div class="panel-heading col-md-10"><b>Event Information</b></div>
         <div class="panel-body">
         
-        <fieldset class="col-md-10" style="display:inline-block;">
+        <center><fieldset class="col-xs-12" style="display:inline-block;">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <table>
-                        <tr><th>Select</th><th>Band/Artist(s)</th><th>Location Name</th><th>Event Date</th><th>Event Time</th><th>Status</th><th>Seating Capacity</th><th>Event Manager</th><th>Notes</th></tr>
-                        <tr>
-                        <td><center><input type="checkbox" name="select"></center></td>
-                        <td><input type="text" name="performer" size="10"></td>
-                        <td><input type="text" name="location" size="10"></td>
-                        <td><input type="text" name="date" size="10"></td>
-                        <td><input type="text" name="time" size="10"></td>
-                        <td><input type="text" name="status" size="10"></td>
-                        <td><input type="text" name="capacity" size="16"></td>
-                        <td><input type="text" name="manager" size="15"></td>
-                        <td><input type="text" name="notes" size="15"></td>
-                        </tr>
-                        <tr>
-                        <td><center><input type="checkbox" name="select"></center></td>
-                        <td><input type="text" name="performer" size="10"></td>
-                        <td><input type="text" name="location" size="10"></td>
-                        <td><input type="text" name="date" size="10"></td>
-                        <td><input type="text" name="time" size="10"></td>
-                        <td><input type="text" name="status" size="10"></td>
-                        <td><input type="text" name="capacity" size="16"></td>
-                        <td><input type="text" name="manager" size="15"></td>
-                        <td><input type="text" name="notes" size="15"></td>
-                        </tr>
-                        <tr>
-                        <td><center><input type="checkbox" name="select"></center></td>
-                        <td><input type="text" name="performer" size="10"></td>
-                        <td><input type="text" name="location" size="10"></td>
-                        <td><input type="text" name="date" size="10"></td>
-                        <td><input type="text" name="time" size="10"></td>
-                        <td><input type="text" name="status" size="10"></td>
-                        <td><input type="text" name="capacity" size="16"></td>
-                        <td><input type="text" name="manager" size="15"></td>
-                        <td><input type="text" name="notes" size="15"></td>
-                        </tr>
-                        <tr><td><br/></td></tr>
-                    
-                        <tr>
-                        <td><input type="reset" value="Clear"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
-                        <td style="text-align:right;"><input type="submit" value="Approve"></td>
-                        </tr>
-                    
-                        </table>
+                        <!-- create dropdown then display info -->
+                        Event : <input type="text" name="event" >
                     </div>
                 </div>
-            
+            <input style="float:left" type="reset" value="Reset">
+        <input style="float:right" type="submit" value="Approve">
         </fieldset>
         <br/><br/>
         
-        <div class="clearfix"></div>
-        </div>
     </div>
     </form>
 

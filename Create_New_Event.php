@@ -26,7 +26,6 @@
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
-            <li><a href="Create_New_Agent.php">Create Agent</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li class="active"><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Approve_Event.php">Approve Event</a></li>
@@ -40,36 +39,38 @@
     </center>
     <form action="New_Event_Notification.php" method="POST">
     <div class="panel panel-default">
-        <div class="panel-heading"><b>Event Information</b></div>
         <div class="panel-body">
         
-        <fieldset class="col-md-4" style="display:inline-block;">
+        <center><fieldset class="col-xs-6" style="display:inline-block;">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td class="left-column">Event Name : </td><td style="text-align:right"><input type="text" size="23" name="event"></td></tr>
-                        <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" size="23" name="performer"></td></tr>
-                        <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" size="23" name="location"></td></tr>
-                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" size="23" name="date"></td></tr>
-                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time" size="23"></td></tr>
-                        <tr><td class="left-column">Status : </td><td style="text-align:right"><input type="text" size="23" name="status"></td></tr>
-                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" size="23" name="capacity"></td></tr>
-                        <tr><td class="left-column">Event Manager : </td><td style="text-align:right"><input type="text" size="23" name="manager"></td></tr>
-                        <tr><td class="left-column">Notes: </td><td style="text-align:right"><input type="text" size="23" name="notes"></td></tr>
-                        <tr><td><br/></td></tr>
-                    
-                        <tr>
-                        <td><input type="reset" value="Reset"></td>
-                        <td style="text-align:right;"><input type="submit" value="Submit"></td>
-                        </tr>
-                    
+                        <!-- make these dropdowns -->
+                        <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" name="performer"></td></tr>
+                        <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="location"></td></tr>
+                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
+                        
                         </table>
                     </div>
                 </div>
-            
+        </fieldset>
+        <fieldset class="col-xs-6" style="display:inline-block;">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table>
+                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" name="date"></td></tr>
+                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time"></td></tr>
+                        <!-- make this dropdown -->
+                        <tr><td class="left-column">Status : </td><td style="text-align:right"><input type="text" name="status"></td></tr>
+                        </table>
+                    </div>
+                </div>
         </fieldset>
         <br/><br/>
-        
+        Notes : <input type="text" name="notes" >
+        <br/><br/>
+        <input style="float:left" type="reset" value="Reset">
+        <input style="float:right" type="submit" value="Submit">
         <div class="clearfix"></div>
         </div>
     </div>

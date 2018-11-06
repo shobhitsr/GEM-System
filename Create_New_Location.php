@@ -26,7 +26,6 @@
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
             <li><a href="Create_New_Artist.php">Create Artist</a></li>
-            <li><a href="Create_New_Agent.php">Create Agent</a></li>
             <li class="active"><a href="Create_New_Location.php">Create Location</a></li>
             <li><a href="Create_New_Event.php">Create Event</a></li>
             <li><a href="Approve_Event.php">Approve Event</a></li>
@@ -40,44 +39,42 @@
     </center>
     <form action="New_Location_Notification.php" method="POST">
     <div class="panel panel-default">
-        <div class="panel-heading"><b>Location Information</b></div>
         <div class="panel-body">
         
-        <fieldset class="col-md-4" style="display:inline-block;">
+        <center><fieldset class="col-xs-6" style="display:inline-block;">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td class="left-column">Name : </td><td style="text-align:right"><input type="text" size="23" name="name"></td></tr>
-                        <tr><td><br/></td></tr>
-                        <tr><td class="left-column">Address : </td><td class="left-column">Apt. # : <input type="text" name="apt_no"></td></tr>
-                        <tr><td></td><td class="left-column">Street : <input type="text" name="street"></td></tr>
-                        <tr><td></td><td class="left-column">City : <input type="text" name="city"></td></tr>
-                        <tr><td></td><td class="left-column">State : <input type="text" name="state"></td></tr>
-                        <tr><td></td><td class="left-column">Country: <input type="text" name="country"></td></tr>
-                        <tr><td></td><td class="left-column">ZIP : <input type="text" name="zipcode"></td></tr>
-                        <tr><td><br/></td></tr>
-                        <tr><td class="left-column">Contact name : </td><td style="text-align:right"><input type="text" size="23" name="contactname"></td></tr>
-                        <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" size="23"></td></tr>
-                    <tr><td class="left-column">Office Phone # : </td><td style="text-align:right"><input type="text" size="23" name="officephone"></td></tr>
-                        
-                        <tr><td class="left-column">Cell Phone # : </td><td style="text-align:right"><input type="text" size="23" name="cellphone"></td></tr>
-                    <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" size="23" name="capacity"></td></tr>
-                        <tr><td><br/></td></tr>
-                    
-                        <tr>
-                        <td><input type="reset" value="Reset"></td>
-                        <td style="text-align:right;"><input type="submit" value="Submit"></td>
-                        </tr>
-                    
+                        <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="name"></td></tr>
+                        <tr><td class="left-column">Contact name : </td><td style="text-align:right"><input type="text" name="contactname"></td></tr>
+                        <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" ></td></tr>
+                        <tr><td class="left-column">Office Phone # : </td><td style="text-align:right"><input type="text" name="officephone"></td></tr>
+                        <tr><td class="left-column">Cell Phone # : </td><td style="text-align:right"><input type="text" name="cellphone"></td></tr>
+                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
                         </table>
                     </div>
                 </div>
-            
+        </fieldset>
+        <fieldset class="col-xs-6" style="display:inline-block;">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <table>
+                        <tr><td class="left-column">Apt. # : </td><td><input type="text" name="apt_no"></td></tr>
+                        <tr><td class="left-column">Street : </td><td><input type="text" name="street"></td></tr>
+                        <tr><td class="left-column">City : </td><td><input type="text" name="city"></td></tr>
+                        <tr><td class="left-column">State : </td><td><input type="text" name="state"></td></tr>
+                        <tr><td class="left-column">Country: </td><td><input type="text" name="country"></td></tr>
+                        <tr><td class="left-column">ZIP : </td><td><input type="text" name="zipcode"></td></tr>
+                        </table>
+                    </div>
+                </div>
         </fieldset>
         <br/><br/>
+        Notes : <input type="text" name="notes" >
+        <br/><br/>
+        <input style="float:left" type="reset" value="Reset">
+        <input style="float:right" type="submit" value="Submit">
         
-        <div class="clearfix"></div>
-        </div>
     </div>
     </form>
 
