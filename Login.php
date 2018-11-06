@@ -65,18 +65,22 @@
             border-color:#017572;
          }
          
-         h2{
+         h1{
             text-align: center;
             color: #017572;
          }
+         input{
+             float: center;
+         }
+         
       </style>
       
    </head>
 	
    <body>
       
-      <h2>GEM System Login</h2> 
-      <div class = "container form-signin">
+      <h1>GEM System Login</h1> 
+      <div class = "container-fluid form-signin">
          
          <?php
             $msg = '';
@@ -116,24 +120,23 @@
          ?>
       </div> <!-- /container -->
       
-      <div class = "container">
       
-         <form class = "form-signin" role = "form" 
-            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']); 
-            ?>" method = "post">
+      
+         <form class = "form-signin container-body" role = "form" 
+            action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method = "post">
             <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-            <input type = "text" class = "form-control" 
+            
+            <center><input type = "text" class = "form-control"
                name = "username" placeholder = "username = shobhit" 
-               required autofocus><br>
-            <input type = "password" class = "form-control"
-               name = "password" placeholder = "password = 1234" required>
-            <button class = "btn btn-lg btn-primary btn-block" type = "submit" 
-               name = "login">Login</button>
+               required autofocus></center>
+            <center><input type = "password" class = "form-control"
+               name = "password" placeholder = "password = 1234" required></center>
          </form>
-			
-         Click here to clean <a href = "Logout.php" tite = "Logout">Session.
+            
+			<center><button class = "btn btn-lg btn-primary btn-block" type = "submit" style="font-size:16px"
+               name = "login">Login</button></center>
+               
+         <!--Click here to clean <a href = "Logout.php" tite = "Logout">Session.-->
          
-      </div> 
-      
    </body>
 </html>
