@@ -57,6 +57,9 @@ create table Artist_Record
         Artist_ID int auto_increment primary key,
         Artist_FName char(25),
         Artist_LName char(25),
+        Artist_Office_Phone char(10),
+        Artist_Cell_Phone char(10),
+        Artist_Rate char(10),
         Artist_Apt char(10),
         Artist_Street char (50),
         Artist_City char(30),
@@ -64,7 +67,6 @@ create table Artist_Record
         Artist_Country char(30),
         Artist_ZIP char(10),
         Artist_Email char(100),
-        Artist_Rate char(20),
         Artist_Comments varchar(300)
     );
 

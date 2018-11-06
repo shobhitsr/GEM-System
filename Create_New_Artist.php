@@ -45,6 +45,9 @@
         {
             $fname = $_POST['firstname'];
             $lname = $_POST['lastname'];
+            $artist_office_phone = $_POST['officephone'];
+            $artist_cphone = $_POST['cellphone'];
+            $artist_rate = $_POST['concertrate'];
             $apt = $_POST['apt_no'];
             $st = $_POST['street'];
             $cty = $_POST['city'];
@@ -52,29 +55,38 @@
             $cont = $_POST['country'];
             $zip = $_POST['zipcode'];
             $eml = $_POST['email'];
+            $comments = $_POST['notes'];
             $sql="insert into Artist_Record 
                                 (
                                     Artist_FName, 
                                     Artist_LName, 
+                                    Artist_Office_Phone,
+                                    Artist_Cell_Phone,
+                                    Artist_Rate,
                                     Artist_Apt, 
                                     Artist_Street, 
                                     Artist_City, 
                                     Artist_State, 
                                     Artist_Country, 
                                     Artist_ZIP,
-                                    Artist_Email
+                                    Artist_Email,
+                                    Artist_Comments
                                 ) 
                                 values 
                                 (
                                     '$fname', 
-                                    '$lname', 
+                                    '$lname',
+                                    '$artist_office_phone',
+                                    '$artist_cphone',
+                                    '$artist_rate', 
                                     '$apt',
                                     '$st', 
                                     '$cty', 
                                     '$state', 
                                     '$cont', 
                                     '$zip', 
-                                    '$eml'
+                                    '$eml',
+                                    '$comments'
                                 )";
             
             if ($conn->query($sql) == TRUE)
