@@ -91,7 +91,25 @@
                         <table>
                         <!-- make these dropdowns -->
                         <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name"></td></tr>
-                        <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" name="performer"></td></tr>
+                        <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right">
+                            <?php
+                                echo '<form method = "POST">';
+                                $sql = "select * from Artist_Record";
+                                echo '<select name="Artist_id" id="Artist_id">';
+                                foreach($conn->query($sql2) as $row2 )
+                                {
+                                     echo "<option value='";
+                                     echo $row2['Artist_ID'];
+                                     echo "'>";
+                                     echo $row2['Artist_FName'];
+                                     echo " ";
+                                     echo $row2['Artist_LName'];
+                                     echo "</option>";
+                                 }//end foreach
+                                 echo '</select>';
+                                 echo '</form>';
+                            ?>
+                        </td></tr>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="location"></td></tr>
                         </table>
                     </div>
