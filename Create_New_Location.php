@@ -37,7 +37,66 @@
     <center>
         <h1>Create New Location</h1>
     </center>
-    <form action="New_Location_Notification.php" method="POST">
+    <?php
+        require ('conn.php');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $loc_name = $_POST['name'];
+            $loc_man = $_POST['contactname'];
+            $loc_man_email = $_POST['email'];
+            $loc_office_phone = $_POST['officephone'];
+            $loc_man_cphone = $_POST['cellphone'];
+            $loc_capacity = $_POST['capacity'];
+            $loc_street = $_POST['street'];
+            $loc_city = $_POST['city'];
+            $loc_state = $_POST['state'];
+            $loc_country = $_POST['country'];
+            $loc_zip = $_POST['zipcode'];
+            $loc_comment = $_POST['notes'];
+            $sql="insert into Location 
+                                (
+                                    Location_Name, 
+                                    Location_Manager,
+                                    Location_M_Email, 
+                                    Location_M_Office_Phone,
+                                    Location_M_Cell_Phone,
+                                    Location_Seating_Capacity,
+                                    Location_Street,
+                                    Location_City,
+                                    Location_State,
+                                    Location_Country,
+                                    Location_ZIP,
+                                    Location_Comments
+                                )
+                                values
+                                (
+                                    '$loc_name',
+                                    '$loc_man',
+                                    '$loc_man_email',
+                                    '$loc_office_phone',
+                                    '$loc_man_cphone',
+                                    '$loc_capacity',
+                                    '$loc_street',
+                                    '$loc_city',
+                                    '$loc_state',
+                                    '$loc_country',
+                                    '$loc_zip',
+                                    '$loc_comment'
+                                );";
+            if ($conn->query($sql) == TRUE)
+            {
+                $last_id = $conn->lastInsertId();
+                $get_info = "?success=true&id=".$last_id;
+                header("Location: New_Location_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    ?>
+    <form action="Create_New_Location.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-body">
         

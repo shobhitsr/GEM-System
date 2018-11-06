@@ -72,16 +72,16 @@ create table Location
     (
         Location_ID int auto_increment primary key,
         Location_Name char(50),
-        Location_Street char (50),
-        Location_City char(30),
-        Location_State char(30),
-        Location_Country char(30),
-        Location_ZIP char(10),
         Location_Manager char(50),
         Location_M_Email char(100),
         Location_M_Office_Phone char(12),
         Location_M_Cell_Phone char(12),
         Location_Seating_Capacity char(10),
+        Location_Street char (50),
+        Location_City char(30),
+        Location_State char(30),
+        Location_Country char(30),
+        Location_ZIP char(10),
         Location_Comments varchar(300)
     );
 

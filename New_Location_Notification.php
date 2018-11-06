@@ -27,15 +27,25 @@
         <center>
         <h1>New Location created</h1>
          </center>
-        Welcome
-        <?php echo $_POST["name"]; ?>
-        <br> Your address is: <?php echo $_POST["apt_no"];?> <?php echo $_POST["street"];?> <?php echo $_POST["city"];?> 
-        <?php echo $_POST["state"];?> <?php echo $_POST["country"];?> <?php echo $_POST["zipcode"];?>
-        <br> Your contact is: <?php echo $_POST["contactname"];?>
-        <br> Their email address is: <?php echo $_POST["email"]; ?>
-        <br> Their office phone # is: <?php echo $_POST["officephone"]; ?>
-        <br> Their cell phone # is: <?php echo $_POST["cellphone"]; ?>
-        <br> The seating capacity is: <?php echo $_POST["capacity"]; ?>
+        <?php
+            require ('conn.php');
+            $id = intval($_GET['id']);
+            $sql = "select * from Location where Location_ID = $id";
+            foreach($conn->query($sql) as $row3)
+            {
+                echo "The Location ".$row3['Location_Name']." has been added to the database"."</br>";
+                echo "The Location Manager is ".$row3['Location_Manager']."</br>";
+                echo "The managers contact information is:</br>";
+                echo "Email: ".$row3['Location_M_Email']."</br>";
+                echo "Office Phone: ".$row3['Location_M_Office_Phone']."</br>";
+                echo "Cell Phone: ".$row3['Location_M_Cell_Phone']."</br>";
+                echo "The location's Seating Capacity is: ".$row3['Location_Seating_Capacity']."</br>";
+                echo "The address of the location is"."</br>";
+                echo $row3['Location_Street']." ".$row3['Location_City']." ".$row3['Location_State']." ".$row3['Location_Country']." ".$row3['Location_ZIP'];
+                echo "<br>Comments about the location are: ".$row3['Location_Comments'];
+            }//end foreach
+
+        ?>
 
         <br><br><a href="HomePage.php"><button type="submit">Return to Home Page</button></a>
         

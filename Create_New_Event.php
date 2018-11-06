@@ -37,6 +37,9 @@
     <center>
         <h1>Create New Event</h1>
     </center>
+    <?php
+        require ('conn.php');
+    ?>
     <form action="New_Event_Notification.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-body">
