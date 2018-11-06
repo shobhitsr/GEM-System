@@ -90,12 +90,11 @@ create table Event
         Event_ID int auto_increment primary key,
         Event_Name char(50),
         Event_Location char(100),
-        Event_Manager char(100),
         Event_Performer char(100),
+        Event_Capacity char(10),
         Event_Date char(20),
         Event_Time char(20),
-        Event_Approval_Status char(5),
-        Event_Capacity char(10),
+        Event_Approval_Status char(5) Default 'NO',
         Event_Comments varchar(300)
     );
 

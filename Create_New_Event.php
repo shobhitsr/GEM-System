@@ -39,8 +39,48 @@
     </center>
     <?php
         require ('conn.php');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $event_name = $_POST['name'];
+            $event_location = $_POST['location'];
+            $event_performer = $_POST['performer'];
+            $event_capacity = $_POST['capacity'];
+            $event_date = $_POST['date'];
+            $event_time = $_POST['time'];
+            $event_notes = $_POST['notes'];
+            $sql="insert into Event
+                                (
+                                    Event_Name,
+                                    Event_Location,
+                                    Event_Performer,
+                                    Event_Capacity,
+                                    Event_Date,
+                                    Event_Time,
+                                    Event_Comments
+                                )
+                                values
+                                (
+                                   '$event_name',
+                                   '$event_location',
+                                   '$event_performer',
+                                   '$event_capacity',
+                                   '$event_date',
+                                   '$event_time',
+                                   '$event_notes' 
+                                )";
+            if ($conn->query($sql) == TRUE)
+            {
+                $last_id = $conn->lastInsertId();
+                $get_info = "?success=true&id=".$last_id;
+                header("Location: New_Event_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
     ?>
-    <form action="New_Event_Notification.php" method="POST">
+    <form action="Create_New_Event.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-body">
         
@@ -49,10 +89,9 @@
                     <div class="panel-body">
                         <table>
                         <!-- make these dropdowns -->
+                        <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name"></td></tr>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right"><input type="text" name="performer"></td></tr>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="location"></td></tr>
-                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
-                        
                         </table>
                     </div>
                 </div>
@@ -64,7 +103,7 @@
                         <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" name="date"></td></tr>
                         <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time"></td></tr>
                         <!-- make this dropdown -->
-                        <tr><td class="left-column">Status : </td><td style="text-align:right"><input type="text" name="status"></td></tr>
+                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
                         </table>
                     </div>
                 </div>
