@@ -48,6 +48,24 @@ passenger:
 | Event_Capacity        | char(10)     | YES  |     | NULL    |                |
 | Event_Comments        | varchar(300) | YES  |     | NULL    |                |
 +-----------------------+--------------+------+-----+---------+----------------+
+
++--------------------+--------------+------+-----+---------+-------+
+| Field              | Type         | Null | Key | Default | Extra |
++--------------------+--------------+------+-----+---------+-------+
+| Agent_ID           | int(5)       | NO   | PRI | NULL    |       |
+| Agent_FName        | char(25)     | YES  |     | NULL    |       |
+| Agent_LName        | char(25)     | YES  |     | NULL    |       |
+| Agent_Office_Phone | char(25)     | YES  |     | NULL    |       |
+| Agent_CPhone       | char(25)     | YES  |     | NULL    |       |
+| Agent_Email        | char(25)     | YES  |     | NULL    |       |
+| Agent_Apt          | char(10)     | YES  |     | NULL    |       |
+| Agent_Street       | char(50)     | YES  |     | NULL    |       |
+| Agent_City         | char(30)     | YES  |     | NULL    |       |
+| Agent_State        | char(30)     | YES  |     | NULL    |       |
+| Agent_Country      | char(30)     | YES  |     | NULL    |       |
+| Agent_ZIP          | char(10)     | YES  |     | NULL    |       |
+| Agent_Comments     | varchar(300) | YES  |     | NULL    |       |
++--------------------+--------------+------+-----+---------+-------+
 */
 
 drop table if exists Artist_Record;

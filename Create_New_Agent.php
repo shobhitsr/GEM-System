@@ -38,7 +38,67 @@
     <center>
         <h1>Create New Agent</h1>
     </center>
-    <form action="Create_New_Artist.php" method="POST">
+    <?php
+        require ('conn.php');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $fname = $_POST['firstname'];
+            $lname = $_POST['lastname'];
+            $Agent_office_phone = $_POST['officephone'];
+            $Agent_cphone = $_POST['cellphone'];
+            $eml = $_POST['email'];
+            $apt = $_POST['apt_no'];
+            $st = $_POST['street'];
+            $cty = $_POST['city'];
+            $state = $_POST['state'];
+            $cont = $_POST['country'];
+            $zip = $_POST['zipcode'];
+            $comments = $_POST['notes'];
+            $sql="insert into Agent
+                                (
+                                    Agent_FName, 
+                                    Agent_LName, 
+                                    Agent_Office_Phone,
+                                    Agent_CPhone,
+                                    Agent_Email,
+                                    Agent_Apt, 
+                                    Agent_Street, 
+                                    Agent_City, 
+                                    Agent_State, 
+                                    Agent_Country, 
+                                    Agent_ZIP,
+                                    Agent_Comments
+                                ) 
+                                values 
+                                (
+                                    '$fname', 
+                                    '$lname',
+                                    '$Agent_office_phone',
+                                    '$Agent_cphone',
+                                    '$eml',
+                                    '$apt',
+                                    '$st', 
+                                    '$cty', 
+                                    '$state', 
+                                    '$cont', 
+                                    '$zip', 
+                                    '$comments'
+                                )";
+            
+            if ($conn->query($sql) == TRUE)
+            {
+                $last_id = $conn->lastInsertId();
+                $get_info = "?success=true&id=".$last_id;
+                header("Location: New_Agent_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+
+    ?>
+    <form action="Create_New_Agent.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-body">
         
