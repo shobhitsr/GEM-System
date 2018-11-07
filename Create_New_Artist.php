@@ -137,7 +137,28 @@
                 </div>
         </fieldset>
         <br/><br/>
-        Agent : <input type="text" name="agent" >
+        Agent : <?php
+                            require ('conn.php');
+                                echo '<form method = "GET">';
+                                echo '<select name="Agent_id" id="Agent_id">';
+                                $sql2 = "select * from Agent";
+                                $prep = $conn->prepare($sql2);
+                                $prep -> execute();
+                                $files = $prep->fetchAll();
+                                foreach($files as $row2)
+                                {
+
+                                     echo "<option value='";
+                                     echo $row2['Agent_ID'];
+                                     echo "'>";
+                                     echo $row2['Agent_FName'];
+                                     echo " ";
+                                     echo $row2['Agent_LName'];
+                                     echo "</option>";
+                                }//end foreach
+                                echo '</select>';
+                                echo '</form>';
+                ?>
         <br/>
         Notes : <input type="text" name="notes" >
         <br/><br/>
