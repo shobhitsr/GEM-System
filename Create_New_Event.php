@@ -128,16 +128,21 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td class="left-column">Event Date : </td><td style="text-align:right"><input type="text" name="date" placeholder="xx/xx/xxxx"></td></tr>
-                        <tr><td class="left-column">Event Time : </td><td style="text-align:right"><input type="text" name="time" placeholder="xx:xx am/pm"></td></tr>
+                        <tr><td class="left-column">Event Date : </td><td><input type="date" name="date" style="width: 150px"></td></tr>
+                        <tr><td class="left-column">Event Time : </td><td><input type="time" name="time" style="width: 150px"></td></tr>
                         <!-- make this dropdown -->
-                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
+                        <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity" style="width: 150px"></td></tr>
                         </table>
                     </div>
                 </div>
         </fieldset>
         <br/><br/>
-        Notes : <input type="text" name="notes" >
+        <div class="col-xs-12 panel panel-default">
+                <div class="panel-body">
+                    <h4><b>Comments:</b></h4>
+                    <textarea rows="2" cols="150" name="comments" ></textarea>
+                </div>
+        </div></center>
         <br/><br/>
         <input style="float:left" type="reset" value="Reset">
         <input style="float:right" type="submit" value="Submit">
