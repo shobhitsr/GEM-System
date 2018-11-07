@@ -44,12 +44,32 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $event_name = $_POST['name'];
-            $event_location = $_POST['location'];
-            $event_performer = $_POST['performer'];
+            $event_location = "";
+            if($_POST['loc_id'])
+            {
+                $Loc_id = $_POST['loc_id'];
+                $sqlloc = "select * from Location where Location_Id = $Loc_id";
+                foreach($conn->query($sqlloc) as $fileloc)
+                {
+                    $event_location = $fileloc['Location_Name'];
+                }
+            }
+            $Art_id = $_POST['artist_id'];
+            $event_performer = "";
+            //$sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
+            if($_POST['artist_id'])
+            {
+                $sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
+                foreach($conn->query($sqlperform) as $fileperform)
+                {
+                    $event_performer = $fileperform['Artist_FName']." ".$fileperform['Artist_LName'];
+                }
+            }
+            
             $event_capacity = $_POST['capacity'];
             $event_date = $_POST['date'];
             $event_time = $_POST['time'];
-            $event_notes = $_POST['notes'];
+            $event_notes = $_POST['comments'];
             $sql="insert into Event
                                 (
                                     Event_Name,
@@ -95,9 +115,9 @@
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right">
                             
                             <?php
-                            require ('conn.php');
-                                echo '<form method = "GET">';
-                                echo '<select name="Artist_id" id="Artist_id">';
+                            
+                                echo '<form method = "POST">';
+                                echo '<select name="artist_id" id="artist_id">';
                                 $sql2 = "select * from Artist_Record";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
@@ -112,14 +132,35 @@
                                      echo " ";
                                      echo $row2['Artist_LName'];
                                      echo "</option>";
-                                }//end foreach
+                                }
                                 echo '</select>';
                                 echo '</form>';
 
                             ?>
-                            
                         </td></tr>
-                        <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="location"></td></tr>
+                        <tr><td class="left-column">Location Name : </td><td style="text-align:right">
+                            
+                            <?php
+                                
+                                    echo '<form method = "POST">';
+                                    echo '<select name="loc_id" id="loc_id">';
+                                    $sql3 = "select * from Location";
+                                    $prep1 = $conn->prepare($sql3);
+                                    $prep1 -> execute();
+                                    $files1 = $prep1->fetchAll();
+                                    foreach($files1 as $row3)
+                                    {
+                                        echo "<option value='";
+                                        echo $row3['Location_ID'];
+                                        echo "'>";
+                                        echo $row3['Location_Name'];
+                                        echo "</option>";
+                                    }
+                                    echo '</select>';
+                                    echo '</form>';
+
+                            ?>
+                        </td></tr>
                         </table>
                     </div>
                 </div>
