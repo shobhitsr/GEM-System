@@ -39,27 +39,30 @@
     </nav>
     <center>
         <h1>Home Page</h1>
+        <br/>
     </center>
-<!--   
-<div class="container">
-  <h3>Basic Navbar Example</h3>
-  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
-</div>
--->
+    
     <form action="HomePage.php" method="post">
-        <?php
-            $sql1 = "select Artist_FName, Artist_LName from Artist_Record order by Artist_LName";
-            echo "<br><b> NAME OF ALL THE ARTISTS : </b><br><br>";
-            foreach($conn->query($sql1) as $row1 )
-            {
-                echo $row1['Artist_FName'];
-                echo " ";
-                echo $row1['Artist_LName'];
-                echo '<br>';
-            }
-            echo '<br>';
-        ?>
     </form>
+    
+            <center><fieldset class="col-xs-6" style="display:inline-block;">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <br/>
+                        <a href="Generate_Report.php"><h3>Generate a Report</h3></a>
+                        <br/>
+                    </div>
+                </div>
+        </fieldset>
+        <fieldset class="col-xs-6" style="display:inline-block;">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <!-- create dropdown then display info -->
+                        <h3>Approve Event:</h3> <br/>
+                        <input type="text" name="event" > <button><a href="Approve_Event.php">Go</a></button>
+                    </div>
+                </div>
+        </fieldset></center>
 
 </body>
 </html>
