@@ -131,10 +131,11 @@
                required autofocus></center>
             <center><input type = "password" class = "form-control"
                name = "password" placeholder = "password = 1234" required></center>
+            <center><button class = "btn btn-lg btn-primary btn-block" type = "submit" style="font-size:16px"
+            name = "login">Login</button></center>
          </form>
             
-			<center><button class = "btn btn-lg btn-primary btn-block" type = "submit" style="font-size:16px"
-               name = "login">Login</button></center>
+			
                
          <!--Click here to clean <a href = "Logout.php" tite = "Logout">Session.-->
          
