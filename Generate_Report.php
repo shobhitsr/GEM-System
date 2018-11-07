@@ -64,31 +64,31 @@
                         <table>
                         <tr><td><b><u>Include:</u></b></td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="performer">
+                            <input class="form-check-input" type="checkbox" value="" id="performer" checked>
                             <label class="form-check-label" for="performer">Performer(s)&nbsp;&nbsp;</label>
                         </td>
                             <td>
-                            <input class="form-check-input" type="checkbox" value="" id="location">
+                            <input class="form-check-input" type="checkbox" value="" id="location" checked>
                             <label class="form-check-label" for="location">Location</label>
                         </td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="status">
+                            <input class="form-check-input" type="checkbox" value="" id="status" checked>
                             <label class="form-check-label" for="status">Status</label>
                         </td>
                             <td>
-                            <input class="form-check-input" type="checkbox" value="" id="capacity">
+                            <input class="form-check-input" type="checkbox" value="" id="capacity" checked>
                             <label class="form-check-label" for="capacity">Seating Capacity</label>
                         </td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="date">
+                            <input class="form-check-input" type="checkbox" value="" id="date" checked>
                             <label class="form-check-label" for="date">Event Date</label>
                         </td>
                         <td>
-                            <input class="form-check-input" type="checkbox" value="" id="time">
+                            <input class="form-check-input" type="checkbox" value="" id="time" checked>
                             <label class="form-check-label" for="time">Event Time</label>
                         </td></tr>
-                        <tr/><td>
-                            <input class="form-check-input" type="checkbox" value="" id="manager">
+                        <tr><td>
+                            <input class="form-check-input" type="checkbox" value="" id="manager" checked>
                             <label class="form-check-label" for="manager">Event Manager</label>
                         </td></tr>
                         <tr><td></td></tr>
@@ -102,7 +102,7 @@
                 <div class="panel-body">
                     
                     <b>Date Range:</b><br/><br/>
-                    From <input type="text" name="date1" size="10"> To: <input type="text" name="date2" size="10">
+                    From <input type="date" name="date1" size="10"> To: <input type="date" name="date2" size="10">
                 </div>
             </div>
         </fieldset>
