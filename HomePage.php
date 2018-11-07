@@ -85,7 +85,6 @@
                                 }
                                 echo '</select>';
                                 echo '</form>';
-                                $_
                             ?><input style="float:center" type="submit" value="Go">
                     </div>
                 </div>
