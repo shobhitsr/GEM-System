@@ -8,6 +8,12 @@
     // session is true and equals to string
     }
     require ('conn.php');
+    if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $id = $_POST['event_id'];
+            $get_info = "?success=true&evt_id=".$id;
+            header("Location: Approve_Event.php".$get_info);
+        }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +49,7 @@
     </center>
     
     <form action="HomePage.php" method="post">
-    </form>
+    
     
             <center><fieldset class="col-xs-6" style="display:inline-block;">
                 <div class="panel panel-default">
@@ -78,11 +84,11 @@
                                 }
                                 echo '</select>';
                                 echo '</form>';
-
-                            ?><button><a href="Approve_Event.php".$_POST['event_id']>Go</a></button>
+                                $_
+                            ?><input style="float:center" type="submit" value="Go">
                     </div>
                 </div>
         </fieldset></center>
-
+        </form>
 </body>
 </html>

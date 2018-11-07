@@ -44,11 +44,12 @@
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $event_name = $_POST['name'];
+            $loc_id = $_POST['loc_id'];
             $event_location = "";
             if($_POST['loc_id'])
             {
-                $Loc_id = $_POST['loc_id'];
-                $sqlloc = "select * from Location where Location_Id = $Loc_id";
+                $loc_id = $_POST['loc_id'];
+                $sqlloc = "select * from Location where Location_Id = $loc_id";
                 foreach($conn->query($sqlloc) as $fileloc)
                 {
                     $event_location = $fileloc['Location_Name'];
@@ -134,7 +135,7 @@
                                      echo "</option>";
                                 }
                                 echo '</select>';
-                                echo '</form>';
+                                //echo '</form>';
 
                             ?>
                         </td></tr>
@@ -142,7 +143,7 @@
                             
                             <?php
                                 
-                                    echo '<form method = "POST">';
+                                    //echo '<form method = "POST">';
                                     echo '<select name="loc_id" id="loc_id">';
                                     $sql3 = "select * from Location";
                                     $prep1 = $conn->prepare($sql3);
