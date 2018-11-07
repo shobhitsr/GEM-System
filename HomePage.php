@@ -4,7 +4,7 @@
     if(!$_SESSION['valid'] )
     {
         echo 'Invalid Login';
-        header("location:HomePage.php");
+        header("location:Login.php");
     // session is true and equals to string
     }
     require ('conn.php');
@@ -59,7 +59,27 @@
                     <div class="panel-body">
                         <!-- create dropdown then display info -->
                         <h3>Approve Event:</h3> <br/>
-                        <input type="text" name="event" > <button><a href="Approve_Event.php">Go</a></button>
+                        <?php
+                            
+                                echo '<form method = "POST">';
+                                echo '<select name="event_id" id="event_id">';
+                                $sql2 = "select * from Event";
+                                $prep = $conn->prepare($sql2);
+                                $prep -> execute();
+                                $files = $prep->fetchAll();
+                                foreach($files as $row2)
+                                {
+
+                                    echo "<option value='";
+                                    echo $row2['Event_ID'];
+                                    echo "'>";
+                                    echo $row2['Event_Name'];
+                                    echo "</option>";
+                                }
+                                echo '</select>';
+                                echo '</form>';
+
+                            ?><button><a href="Approve_Event.php".$_POST['event_id']>Go</a></button>
                     </div>
                 </div>
         </fieldset></center>
