@@ -123,6 +123,7 @@
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();
+                                echo "<option value=0>None Selected</option>";
                                 foreach($files as $row2)
                                 {
 
@@ -149,6 +150,7 @@
                                     $prep1 = $conn->prepare($sql3);
                                     $prep1 -> execute();
                                     $files1 = $prep1->fetchAll();
+                                    echo "<option value=0>None Selected</option>";
                                     foreach($files1 as $row3)
                                     {
                                         echo "<option value='";

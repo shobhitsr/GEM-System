@@ -145,6 +145,7 @@
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();
+                                echo "<option value=0>None Selected</option>";
                                 foreach($files as $row2)
                                 {
 
