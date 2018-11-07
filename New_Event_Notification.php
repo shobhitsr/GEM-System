@@ -27,16 +27,23 @@
         </nav>
         <center>
         <h1>New Event created</h1>
-         </center>
-        Welcome
-        <br>Your performer(s) is/are: <?php echo $_POST["performer"]; ?>
-        <br> Your location is: <?php echo $_POST["location"];?>
-        <br> Your date is: <?php echo $_POST["date"];?>
-        <br> Your time is: <?php echo $_POST["time"]; ?>
-        <br> Your status is: <?php echo $_POST["status"]; ?>
-        <br> Your seating capacity is: <?php echo $_POST["capacity"]; ?>
-        <br> The event manager is: <?php echo $_POST["manager"]; ?>
-        <br> Here are your notes: <?php echo $_POST["notes"]; ?>
+        </center>
+        <?php
+            require ('conn.php');
+            $id = intval($_GET['id']);
+            $sql = "select * from Event where Event_ID = $id";
+            foreach($conn->query($sql) as $row3)
+            {
+                echo "The Event ".$row3['Event_Name']." has been added to the database"."</br>";
+                echo "The Location is ".$row3['Event_Location']."</br>";
+                echo "The Performer is ".$row3['Event_Performer']."</br>";
+                echo "The event's Date is ".$row3['Event_Date']."</br>";
+                echo "The event's Time is ".$row3['Event_Time']."</br>";
+                echo "The Event's Seating Capacity is: ".$row3['Event_Capacity']."</br>";
+                echo "<br>Comments about the event are: ".$row3['Event_Comments'];
+            }//end foreach
+
+        ?>
 
         <br><br><a href="HomePage.php"><button type="submit">Return to Home Page</button></a>
         
