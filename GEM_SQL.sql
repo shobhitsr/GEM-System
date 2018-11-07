@@ -112,6 +112,23 @@ create table Employee
         Employee_Password char(30)
     );
 
+create table Agent
+    (
+        Agent_ID int(5) primary key,
+        Agent_FName char(25),
+        Agent_LName char(25),
+        Agent_Office_Phone char(25),
+        Agent_CPhone char(25),
+        Agent_Email char(25),
+        Agent_Apt char(10),
+        Agent_Street char (50),
+        Agent_City char(30),
+        Agent_State char(30),
+        Agent_Country char(30),
+        Agent_ZIP char(10),
+        Agent_Comments varchar(300)
+    );
+
 insert into Artist_Record (Artist_FName, Artist_LName, Artist_Apt, Artist_Street, Artist_City, Artist_State, Artist_Country, Artist_ZIP,Artist_Email) 
      values ('Shobhit', 'Srivastava', '12', 'street', '$cty', '$state', '$cont', '$zip', 'abc@example.com');
 

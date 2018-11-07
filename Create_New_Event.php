@@ -40,6 +40,7 @@
     </center>
     <?php
         require ('conn.php');
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $event_name = $_POST['name'];
@@ -92,12 +93,18 @@
                         <!-- make these dropdowns -->
                         <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name"></td></tr>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right">
+                            
                             <?php
-                                echo '<form method = "POST">';
-                                $sql = "select * from Artist_Record";
+                            require ('conn.php');
+                                echo '<form method = "GET">';
                                 echo '<select name="Artist_id" id="Artist_id">';
-                                foreach($conn->query($sql2) as $row2 )
+                                $sql2 = "select * from Artist_Record";
+                                $prep = $conn->prepare($sql2);
+                                $prep -> execute();
+                                $files = $prep->fetchAll();
+                                foreach($files as $row2)
                                 {
+
                                      echo "<option value='";
                                      echo $row2['Artist_ID'];
                                      echo "'>";
@@ -105,10 +112,12 @@
                                      echo " ";
                                      echo $row2['Artist_LName'];
                                      echo "</option>";
-                                 }//end foreach
-                                 echo '</select>';
-                                 echo '</form>';
+                                }//end foreach
+                                echo '</select>';
+                                echo '</form>';
+
                             ?>
+                            
                         </td></tr>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="location"></td></tr>
                         </table>
