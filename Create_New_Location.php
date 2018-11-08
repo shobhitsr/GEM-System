@@ -106,9 +106,9 @@
                         <table>
                         <tr><td class="left-column">Location Name : </td><td style="text-align:right"><input type="text" name="name"></td></tr>
                         <tr><td class="left-column">Contact name : </td><td style="text-align:right"><input type="text" name="contactname"></td></tr>
-                        <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" ></td></tr>
-                        <tr><td class="left-column">Office Phone # : </td><td style="text-align:right"><input type="text" name="officephone"></td></tr>
-                        <tr><td class="left-column">Cell Phone # : </td><td style="text-align:right"><input type="text" name="cellphone"></td></tr>
+                        <tr><td class="left-column">E-mail : </td><td style="text-align:right"><input type="text" name="email" placeholder="xxx@xxx.xxx"></td></tr>
+                        <tr><td class="left-column">Office Phone # : </td><td style="text-align:right"><input type="text" name="officephone" placeholder="###-###-####"></td></tr>
+                        <tr><td class="left-column">Cell Phone # : </td><td style="text-align:right"><input type="text" name="cellphone" placeholder="###-###-####"></td></tr>
                         <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity"></td></tr>
                         </table>
                     </div>
@@ -121,9 +121,9 @@
                         <tr><td class="left-column">Apt. # : </td><td><input type="text" name="apt_no"></td></tr>
                         <tr><td class="left-column">Street : </td><td><input type="text" name="street"></td></tr>
                         <tr><td class="left-column">City : </td><td><input type="text" name="city"></td></tr>
-                        <tr><td class="left-column">State : </td><td><input type="text" name="state"></td></tr>
-                        <tr><td class="left-column">Country: </td><td><input type="text" name="country"></td></tr>
-                        <tr><td class="left-column">ZIP : </td><td><input type="text" name="zipcode"></td></tr>
+                        <tr><td class="left-column">State : </td><td><select name="state" style="width:175px"><option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option><option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option><option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option><option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option><option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option><option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option><option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option><option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option><option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option><option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option><option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option><option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option><option>Wisconsin</option><option>Wyoming</option></select></td></tr>
+                        <tr><td class="left-column">Country: </td><td><input type="text" value="United States" name="country"></td></tr>
+                        <tr><td class="left-column">ZIP : </td><td><input type="text" name="zipcode" placeholder="#####"></td></tr>
                         </table>
                     </div>
                 </div>
