@@ -151,10 +151,10 @@
                 </div>
         </fieldset>
         <br/><br/>
-        Agent : <?php
+        <h3><b>Agent : </b></h3><?php
                             require ('conn.php');
                                 echo '<form method = "GET">';
-                                echo '<select name="Agent_id" id="Agent_id">';
+                                echo '<select name="Agent_id" id="Agent_id" style="width: 150px">';
                                 $sql2 = "select * from Agent";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
@@ -174,8 +174,13 @@
                                 echo '</select>';
                                 echo '</form>';
                 ?>
-        <br/>
-        Notes : <input type="text" name="notes" >
+        <br/><br/>
+        <div class="col-xs-12 panel panel-default">
+                <div class="panel-body">
+                    <h4><b>Comments:</b></h4>
+                    <textarea rows="2" cols="150" name="comments" ></textarea>
+                </div>
+        </div>
         <br/><br/>
         <!-- put dropdown for agent -->
         <input style="float:left" type="reset" value="Reset">

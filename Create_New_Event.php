@@ -129,14 +129,13 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <!-- make these dropdowns -->
-                        <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name"></td></tr>
+                        <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name" style="width: 150px;"></td></tr>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right">
                             
                             <?php
                             
                                 echo '<form method = "POST">';
-                                echo '<select name="artist_id" id="artist_id">';
+                                echo '<select name="artist_id" id="artist_id" style="width: 150px;">';
                                 $sql2 = "select * from Artist_Record";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
@@ -163,7 +162,7 @@
                             <?php
                                 
                                     
-                                    echo '<select name="loc_id" id="loc_id">';
+                                    echo '<select name="loc_id" id="loc_id" style="width: 150px;">';
                                     $sql3 = "select * from Location";
                                     $prep1 = $conn->prepare($sql3);
                                     $prep1 -> execute();
@@ -182,7 +181,7 @@
                         </td></tr>
                         <tr><td class="left-column">Vendor: </td><td style="text-align:right">
                                 <?php
-                                    echo '<select name="vendor_id" id="loc_id">';
+                                    echo '<select name="vendor_id" id="loc_id" style="width: 150px;">';
                                             $sql4 = "select * from Vendor";
                                             $prep2 = $conn->prepare($sql4);
                                             $prep2 -> execute();
