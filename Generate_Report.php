@@ -25,11 +25,10 @@
         </div>
         <ul class="nav navbar-nav">
             <li><a href="HomePage.php">Home</a></li>
-            <li class="active"><a href="Create_New_Artist.php">Create Artist</a></li>
+            <li><a href="Create_New_Artist.php">Create Artist</a></li>
             <li><a href="Create_New_Agent.php">Create Agent</a></li>
             <li><a href="Create_New_Location.php">Create Location</a></li>
             <li><a href="Create_New_Event.php">Create Event</a></li>
-            <li><a href="Approve_Event.php">Approve Event</a></li>
             <li><a href="Logout.php" tile="Logout">Logout</a></li>
         </ul>
         </div>
@@ -71,10 +70,12 @@
                     <div class="panel-body">
                         <table>
                         <tr><td><br/><br/></td></tr>
-                        <tr><td class="left-column">Event Status : </td><td><input type="text" name="lastname"></td></tr>
-                        <tr><td class="left-column">Report Type : </td><td><input type="text" name="email" ></td></tr>
-                        <tr><td class="left-column">Sort By : </td><td><input type="text" name="officephone" ></td></tr>
-                        <tr><td><br/><br/></td></tr>
+                        <tr><td class="left-column">Event Status : </td><td><select style="width:175px"><option>Created</option><option>Approved</option><option>Advertised</option><option>Sold Out</option><option>Cancelled</option><option>Completed</option></select></td></tr>
+                        <tr><td><br/></td></tr>
+                        <tr><td class="left-column">Report Type : </td><td><select style="width:175px"><option>Summary</option><option>Detailed</option></select><br/></td></tr>
+                        <tr><td><br/></td></tr>
+                        <tr><td class="left-column">Sort By : </td><td><select style="width:175px"><option>Performer</option><option>Location</option><option>Status</option><option>Seating Capacity</option><option selected="selected">Event Date</option><option>Event Time</option><option>Vendors</option></select></td></tr>
+                        <tr><td><br/></td></tr>
                         </table>
                     </div>
                 </div>
