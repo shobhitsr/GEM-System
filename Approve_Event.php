@@ -38,6 +38,30 @@
         </div> 
     </nav>
 
+    <!--copied below from create_new_location for your convenience?-->
+    <?php
+        require ('conn.php');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            //insert stuff here
+            
+            
+            if ($conn->query($sql) == TRUE)
+            {
+                
+                //$last_id = $conn->lastInsertId();
+                //$get_info = "?success=true&id=".$last_id;
+                //header("Location: New_Location_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    ?>
+    
+    
     <center>
         <h1>Approve Event</h1>
     </center>
@@ -53,8 +77,8 @@
                                     <div class="panel-body">
                                     <legend>Event Details</legend>
                                         <table>
-                                        <tr><td class="left-column">Event Name : </td><td>insert event name<!--$_POST['eventname']--></td></tr>
-                                        <tr><td class="left-column">Event Date : </td><td>insert event date<!--insert event date--></td></tr>
+                                        <tr><td class="left-column">Event Name : </td><td>insert event name<!--$_POST['eventname']?--></td></tr>
+                                        <tr><td class="left-column">Event Date : </td><td>insert event date</td></tr>
                                         <tr><td class="left-column">Event Time : </td><td>insert event time</td></tr>
                                         <tr><td class="left-column">Event Comments : </td><td>insert event comments</td></tr>
                                         </table>
