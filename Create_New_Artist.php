@@ -54,6 +54,17 @@
             $cont = $_POST['country'];
             $zip = $_POST['zipcode'];
             $eml = $_POST['email'];
+            $agent_id = $_POST['Agent_id'];
+            $agent_name = "";
+            if($_POST['Agent_id'])
+            {
+                $agent_id = $_POST['Agent_id'];
+                $sqlagent = "select * from Agent where Agent_ID = $agent_id";
+                foreach($conn->query($sqlagent) as $fileagent)
+                {
+                    $agent_name = $fileagent['Agent_FName']." ".$fileagent['Agent_LName'];
+                }
+            }
             $comments = $_POST['notes'];
             $sql="insert into Artist_Record 
                                 (
@@ -69,6 +80,8 @@
                                     Artist_Country, 
                                     Artist_ZIP,
                                     Artist_Email,
+                                    Artist_Agent,
+                                    Artist_Agent_ID,
                                     Artist_Comments
                                 ) 
                                 values 
@@ -85,6 +98,8 @@
                                     '$cont', 
                                     '$zip', 
                                     '$eml',
+                                    '$agent_name',
+                                    '$agent_id',
                                     '$comments'
                                 )";
             

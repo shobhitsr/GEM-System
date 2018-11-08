@@ -65,6 +65,17 @@
                     $event_performer = $fileperform['Artist_FName']." ".$fileperform['Artist_LName'];
                 }
             }
+            $ven_id = $_POST['vendor_id'];
+            $event_vendor = "";
+            //$sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
+            if($_POST['vendor_id'])
+            {
+                $sqlven= "select * from Vendor where Vendor_ID = $ven_id";
+                foreach($conn->query($sqlven) as $fileven)
+                {
+                    $event_vendor = $fileven['Vendor_Name'];
+                }
+            }
             
             $event_capacity = $_POST['capacity'];
             $event_date = $_POST['date'];
@@ -73,8 +84,12 @@
             $sql="insert into Event
                                 (
                                     Event_Name,
+                                    Event_Location_ID,
                                     Event_Location,
+                                    Event_Performer_ID,
                                     Event_Performer,
+                                    Event_Vendor_ID,
+                                    Event_Vendor,
                                     Event_Capacity,
                                     Event_Date,
                                     Event_Time,
@@ -83,8 +98,12 @@
                                 values
                                 (
                                    '$event_name',
+                                   '$loc_id',
                                    '$event_location',
+                                   '$Art_id',
                                    '$event_performer',
+                                   '$ven_id',
+                                   '$event_vendor',
                                    '$event_capacity',
                                    '$event_date',
                                    '$event_time',
