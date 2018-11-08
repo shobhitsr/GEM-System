@@ -35,6 +35,29 @@
         </div>
     </nav>
 
+    <!--copied below from create_new_location for your convenience?-->
+    <?php
+        require ('conn.php');
+
+        if($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            //insert stuff here
+            
+            
+            if ($conn->query($sql) == TRUE)
+            {
+                
+                //$last_id = $conn->lastInsertId();
+                //$get_info = "?success=true&id=".$last_id;
+                //header("Location: New_Location_Notification.php".$get_info);
+            }
+            else
+            {
+                echo "Error: " . $sql . "<br>" . $conn->error;
+            }
+        }
+    ?>
+    
     <center>
         <h1>Generate Event Status Report</h1>
     </center>
@@ -47,13 +70,11 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td><br/></td></tr>
+                        <tr><td><br/><br/></td></tr>
                         <tr><td class="left-column">Event Status : </td><td><input type="text" name="lastname"></td></tr>
                         <tr><td class="left-column">Report Type : </td><td><input type="text" name="email" ></td></tr>
                         <tr><td class="left-column">Sort By : </td><td><input type="text" name="officephone" ></td></tr>
-                        <tr><td><br/></td></tr>
-                        <!-- figure out logo -->
-                        <!--<tr><td class="left-column">Logo: </td><td><label class="btn btn-default">Browse <input type="file" hidden></label></td></tr> -->
+                        <tr><td><br/><br/></td></tr>
                         </table>
                     </div>
                 </div>
@@ -62,7 +83,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td><b><u>Include:</u></b></td></tr>
+                        <tr><td><h4><b><u>Include:</u></b></h4></td></tr>
                         <tr><td>
                             <input class="form-check-input" type="checkbox" value="" id="performer" checked>
                             <label class="form-check-label" for="performer">Performer(s)&nbsp;&nbsp;</label>
@@ -89,9 +110,13 @@
                         </td></tr>
                         <tr><td>
                             <input class="form-check-input" type="checkbox" value="" id="manager" checked>
-                            <label class="form-check-label" for="manager">Event Manager</label>
+                            <label class="form-check-label" for="manager">Event Manager&nbsp;&nbsp;</label>
+                        </td>
+                        <td>
+                            <input class="form-check-input" type="checkbox" value="" id="vendor" checked>
+                            <label class="form-check-label" for="vendor">Event Vendors</label>
                         </td></tr>
-                        <tr><td></td></tr>
+                        <tr><td><br/></td></tr>
                         </table>
                     </div>
                 </div>
@@ -101,7 +126,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     
-                    <b>Date Range:</b><br/><br/>
+                    <h4><b>Date Range:</b></h4>
                     From <input type="date" name="date1" size="10"> To: <input type="date" name="date2" size="10">
                 </div>
             </div>
