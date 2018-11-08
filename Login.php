@@ -20,6 +20,7 @@
             padding-bottom: 40px;
             background-image: url("Image.jpg");
             background-repeat: no-repeat;
+            background-position: center;
             background-size: cover;
             
          }
@@ -80,6 +81,7 @@
          
          h1{
             text-align: center;
+            font-size: 300%;
             color: #017572;
          }
          input{
@@ -144,7 +146,7 @@
                required autofocus></center>
             <center><input type = "password" class = "form-control"
                name = "password" placeholder = "password = 1234" required></center>
-            <center><button class = "btn btn-lg btn-primary btn-block" type = "submit" style="font-size:16px"
+            <center><button class = "btn btn-lg btn-primary btn-block" type = "submit" style="font-size:23px"
             name = "login">Login</button></center>
          </form>
             
