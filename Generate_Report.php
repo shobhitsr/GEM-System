@@ -113,11 +113,12 @@
             </div>
         </fieldset>
         <br/><br/>
+        
         <input style="float:left" type="reset" value="Reset">
         <!--<input style="float:center" type="submit" value="Preview">-->
-        <a href="Produce_Detail_Report.php"><button style="float:center">Preview</button></a>
+        <<button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>
         <!--<input style="float:right" type="submit" value="Submit">-->
-        <a href="Produce_Detail_Report.php"><button style="float:right">Submit</button></a>
+        <button style="float:right" onclick="window.location.href='Produce_Detail_Report.php'">Submit</button>
     </center>
     </div>
     </form>

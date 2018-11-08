@@ -419,10 +419,7 @@
                         </center>
                     </div>
                 </div>
-            <!--<a href="HomePage.php"><button style="float:left">Exit</button></a>-->
-            <form method="get" action="HomePage.php">
-                <button type="submit">Exit</button>
-            </form>
+            <button style="float:left" onclick="window.location.href='HomePage.php'">Exit</button>
             <?php 
                 $id = intval($_GET['evt_id']);
                 echo '<input type="hidden" name="event_id" value="';
