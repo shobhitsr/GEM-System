@@ -35,27 +35,7 @@
     </nav>
 
     <!--copied below from create_new_location for your convenience?-->
-    <?php
-        require ('conn.php');
-
-        if($_SERVER['REQUEST_METHOD'] == 'POST')
-        {
-            //insert stuff here
-            
-            
-            if ($conn->query($sql) == TRUE)
-            {
-                
-                //$last_id = $conn->lastInsertId();
-                //$get_info = "?success=true&id=".$last_id;
-                //header("Location: New_Location_Notification.php".$get_info);
-            }
-            else
-            {
-                echo "Error: " . $sql . "<br>" . $conn->error;
-            }
-        }
-    ?>
+    
     
     <center>
         <h1>Generate Event Status Report</h1>
@@ -137,7 +117,7 @@
         <!--<input style="float:center" type="submit" value="Preview">-->
         <a href="Produce_Detail_Report.php"><button style="float:center">Preview</button></a>
         <!--<input style="float:right" type="submit" value="Submit">-->
-        <a href="Produce_Detail_Report.php"><button style="float:center">Submit</button></a>
+        <a href="Produce_Detail_Report.php"><button style="float:right">Submit</button></a>
     </center>
     </div>
     </form>
