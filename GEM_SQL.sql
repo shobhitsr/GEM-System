@@ -74,6 +74,25 @@ Event:
 | Event_Comments        | varchar(300) | YES  |     | NULL    |                |
 +-----------------------+--------------+------+-----+---------+----------------+
 
+Location:
++---------------------------+--------------+------+-----+---------+----------------+
+| Field                     | Type         | Null | Key | Default | Extra          |
++---------------------------+--------------+------+-----+---------+----------------+
+| Location_ID               | int(11)      | NO   | PRI | NULL    | auto_increment |
+| Location_Name             | char(50)     | YES  |     | NULL    |                |
+| Location_Manager          | char(50)     | YES  |     | NULL    |                |
+| Location_M_Email          | char(100)    | YES  |     | NULL    |                |
+| Location_M_Office_Phone   | char(12)     | YES  |     | NULL    |                |
+| Location_M_Cell_Phone     | char(12)     | YES  |     | NULL    |                |
+| Location_Seating_Capacity | char(10)     | YES  |     | NULL    |                |
+| Location_Street           | char(50)     | YES  |     | NULL    |                |
+| Location_City             | char(30)     | YES  |     | NULL    |                |
+| Location_State            | char(30)     | YES  |     | NULL    |                |
+| Location_Country          | char(30)     | YES  |     | NULL    |                |
+| Location_ZIP              | char(10)     | YES  |     | NULL    |                |
+| Location_Comments         | varchar(300) | YES  |     | NULL    |                |
++---------------------------+--------------+------+-----+---------+----------------+
+
 Vendor:
 +-----------------+----------+------+-----+---------+-------+
 | Field           | Type     | Null | Key | Default | Extra |
