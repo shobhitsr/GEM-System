@@ -149,9 +149,12 @@
                         </table>
                     </div>
                 </div>
-        </fieldset>
+        </fieldset></center>
         <br/><br/>
-        <h3><b>Agent : </b></h3><br/><?php
+        <center><div class="col-xs-12">
+        <div class="panel-body">
+        <h4><b>Agent : </b></h4>
+                <?php
                             require ('conn.php');
                                 echo '<form method = "GET">';
                                 echo '<select name="Agent_id" id="Agent_id" style="width: 150px">';
@@ -174,13 +177,14 @@
                                 echo '</select>';
                                 echo '</form>';
                 ?>
+        </div></div>
         <br/><br/>
         <div class="col-xs-12 panel panel-default">
                 <div class="panel-body">
                     <h4><b>Comments:</b></h4>
                     <textarea rows="2" cols="150" name="comments" ></textarea>
                 </div>
-        </div>
+        </div></center>
         <br/><br/>
         <!-- put dropdown for agent -->
         <input style="float:left" type="reset" value="Reset">

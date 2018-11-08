@@ -116,7 +116,7 @@
         
         <input style="float:left" type="reset" value="Reset">
         <!--<input style="float:center" type="submit" value="Preview">-->
-        <<button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>
+        <button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>
         <!--<input style="float:right" type="submit" value="Submit">-->
         <button style="float:right" onclick="window.location.href='Produce_Detail_Report.php'">Submit</button>
     </center>
