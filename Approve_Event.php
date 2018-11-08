@@ -419,7 +419,7 @@
                         </center>
                     </div>
                 </div>
-            <input style="float:left" type="reset" value="Reset">
+            <a href="HomePage.php"><button style="float:left">Exit</button></a>
             <?php 
                 $id = intval($_GET['evt_id']);
                 echo '<input type="hidden" name="event_id" value="';

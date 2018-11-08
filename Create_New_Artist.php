@@ -151,7 +151,7 @@
                 </div>
         </fieldset>
         <br/><br/>
-        <h3><b>Agent : </b></h3><?php
+        <h3><b>Agent : </b></h3><br/><?php
                             require ('conn.php');
                                 echo '<form method = "GET">';
                                 echo '<select name="Agent_id" id="Agent_id" style="width: 150px">';

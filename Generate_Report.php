@@ -134,8 +134,10 @@
         </fieldset>
         <br/><br/>
         <input style="float:left" type="reset" value="Reset">
-        <input style="float:center" type="submit" value="Preview">
-        <input style="float:right" type="submit" value="Submit">
+        <!--<input style="float:center" type="submit" value="Preview">-->
+        <a href="Produce_Detail_Report.php"><button style="float:center">Preview</button></a>
+        <!--<input style="float:right" type="submit" value="Submit">-->
+        <a href="Produce_Detail_Report.php"><button style="float:center">Submit</button></a>
     </center>
     </div>
     </form>
