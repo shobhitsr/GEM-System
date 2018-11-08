@@ -41,7 +41,7 @@
         <h1>Generate Event Status Report</h1>
     </center>
     
-    <form action="Generate_Report.php" method="POST">
+    <form action="" method="">
     <div class="panel panel-default">
         <div class="panel-body">
         
