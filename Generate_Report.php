@@ -40,12 +40,20 @@
     <center>
         <h1>Generate Event Status Report</h1>
     </center>
+    <?php
+        require ('conn.php');
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            header("Location: Produce_Detail_Report.php");
+        }
+    ?>
     
-    <form action="" method="">
+    <form action="Produce_Detail_Report.php" method="POST">
     <div class="panel panel-default">
         <div class="panel-body">
         
-        <center><fieldset class="col-xs-6" style="display:inline-block;">
+        <center>
+        <fieldset class="col-xs-6" style="display:inline-block;">
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
@@ -108,17 +116,17 @@
                 <div class="panel-body">
                     
                     <h4><b>Date Range:</b></h4>
-                    From <input type="date" name="date1" size="10"> To: <input type="date" name="date2" size="10">
+                    From: <input type="date" name="date1" size="10"> To: <input type="date" name="date2" size="10">
                 </div>
             </div>
         </fieldset>
         <br/><br/>
         
         <input style="float:left" type="reset" value="Reset">
-        <!--<input style="float:center" type="submit" value="Preview">-->
-        <button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>
-        <!--<input style="float:right" type="submit" value="Submit">-->
-        <button style="float:right" onclick="window.location.href='Produce_Detail_Report.php'">Submit</button>
+        <input style="float:center" type="submit" value="Preview">
+        <!--<button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>-->
+        <input style="float:right" type="submit" value="Submit">
+        <!--<button style="float:right" onclick="window.location.href='Produce_Detail_Report.php'">Submit</button>-->
     </center>
     </div>
     </form>
