@@ -136,7 +136,7 @@
                                      echo "</option>";
                                 }
                                 echo '</select>';
-                                //echo '</form>';
+                                
 
                             ?>
                         </td></tr>
@@ -144,7 +144,7 @@
                             
                             <?php
                                 
-                                    //echo '<form method = "POST">';
+                                    
                                     echo '<select name="loc_id" id="loc_id">';
                                     $sql3 = "select * from Location";
                                     $prep1 = $conn->prepare($sql3);
@@ -160,9 +160,27 @@
                                         echo "</option>";
                                     }
                                     echo '</select>';
-                                    echo '</form>';
-
                             ?>
+                        </td></tr>
+                        <tr><td class="left-column">Vendor: </td><td style="text-align:right">
+                                <?php
+                                    echo '<select name="vendor_id" id="loc_id">';
+                                            $sql4 = "select * from Vendor";
+                                            $prep2 = $conn->prepare($sql4);
+                                            $prep2 -> execute();
+                                            $files2 = $prep2->fetchAll();
+                                            echo "<option value=0>None Selected</option>";
+                                            foreach($files2 as $row4)
+                                            {
+                                                echo "<option value='";
+                                                echo $row4['Vendor_ID'];
+                                                echo "'>";
+                                                echo $row4['Vendor_Name'];
+                                                echo "</option>";
+                                            }
+                                            echo '</select>';
+                                            echo '</form>';
+                                ?>
                         </td></tr>
                         </table>
                     </div>

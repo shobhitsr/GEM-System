@@ -18,9 +18,22 @@
          body {
             padding-top: 40px;
             padding-bottom: 40px;
-            background-color: #ADABAB;
+            background-image: url("Image.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            
          }
-         
+         .img{
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+         }
+         /*.bg { 
+            
+            height: 100%; 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+         }*/
          .form-signin {
             max-width: 330px;
             padding: 15px;
@@ -55,14 +68,14 @@
             margin-bottom: -1px;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
-            border-color:#017572;
+            border-color:#ffffff;
          }
          
          .form-signin input[type="password"] {
             margin-bottom: 10px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
-            border-color:#017572;
+            border-color:#ffffff;
          }
          
          h1{
