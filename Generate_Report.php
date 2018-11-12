@@ -108,7 +108,7 @@
                             <input class="form-check-input" type="checkbox" value="" id="vendor" checked>
                             <label class="form-check-label" for="vendor">Event Vendors</label>
                         </td></tr>
-                        <tr><td><br/></td></tr>
+                        <tr><td><br/><br/></td></tr>
                         </table>
                     </div>
                 </div>

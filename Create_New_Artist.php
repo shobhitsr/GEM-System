@@ -156,7 +156,7 @@
         <br/><br/>
         <center><div class="col-xs-12">
         <div class="panel-body">
-        <h4><b>Agent : </b></h4>
+        <h4 style="font-size: 24px;"><b>Agent : </b></h4>
                 <?php
                             require ('conn.php');
                                 echo '<form method = "GET">';

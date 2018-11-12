@@ -16,10 +16,7 @@
         .left-column
         {
             text-align: right;
-        }
-        td
-        {
-            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
