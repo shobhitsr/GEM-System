@@ -12,7 +12,10 @@
         .left-column
         {
             text-align: right;
-            font-weight: bold;
+        }
+        td
+        {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -115,17 +118,17 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     
-                    <h4><b>Date Range:</b></h4>
+                    <h4 style="font-size: 24px;"><b>Date Range:</b></h4>
                     From: <input type="date" name="date1" size="10"> To: <input type="date" name="date2" size="10">
                 </div>
             </div>
         </fieldset>
         <br/><br/>
         
-        <input style="float:left" type="reset" value="Reset">
-        <input style="float:center" type="submit" value="Preview">
+        <input style="float:left; font-size: 20px;" type="reset" value="Reset">
+        <input style="float:center; font-size: 20px;" type="submit" value="Preview">
         <!--<button style="float:center" onclick="window.location.href='Produce_Detail_Report.php'">Preview</button>-->
-        <input style="float:right" type="submit" value="Submit">
+        <input style="float:right; font-size: 20px;" type="submit" value="Submit">
         <!--<button style="float:right" onclick="window.location.href='Produce_Detail_Report.php'">Submit</button>-->
     </center>
     </div>

@@ -12,7 +12,10 @@
         .left-column
         {
             text-align: right;
-            font-weight: bold;
+        }
+        td
+        {
+            font-size:20px;
         }
     </style>
 </head>
@@ -133,13 +136,13 @@
         <br/><br/>
         <div class="col-xs-12 panel panel-default">
                 <div class="panel-body">
-                    <h4><b>Comments:</b></h4>
+                    <h4 style="font-size:24px;"><b>Comments:</b></h4>
                     <textarea rows="2" cols="150" name="comments" ></textarea>
                 </div>
         </div>
         <br/><br/>
-        <input style="float:left" type="reset" value="Reset">
-        <input style="float:right" type="submit" value="Submit">
+        <input style="float:left; font-size: 20px;" type="reset" value="Reset">
+        <input style="float:right; font-size: 20px;" type="submit" value="Submit">
     </div>
     </form>
     </body>

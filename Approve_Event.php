@@ -16,7 +16,10 @@
         .left-column
         {
             text-align: right;
-            font-weight: bold;
+        }
+        td
+        {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -419,14 +422,14 @@
                         </center>
                     </div>
                 </div>
-            <button style="float:left" onclick="window.location.href='HomePage.php'">Exit</button>
+            <button style="float:left; font-size: 20px;" onclick="window.location.href='HomePage.php'">Exit</button>
             <?php 
                 $id = intval($_GET['evt_id']);
                 echo '<input type="hidden" name="event_id" value="';
                 echo $id;
                 echo '" />';
             ?>
-        <input style="float:right" type="submit" value="Approve">
+        <input style="float:right; font-size: 20px;" type="submit" value="Approve">
         </fieldset>
         <br/><br/>
         
