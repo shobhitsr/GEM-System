@@ -14,6 +14,10 @@
             text-align: right;
             font-weight: bold;
         }
+        td
+        {
+            font-size:20px;
+        }
     </style>
 </head>
 
