@@ -67,6 +67,28 @@
                         <tr><td><br/></td></tr>
                         <tr><td class="left-column">Sort By : </td><td><select style="width:175px"><option>Performer</option><option>Location</option><option>Status</option><option>Seating Capacity</option><option selected="selected">Event Date</option><option>Event Time</option><option>Vendors</option></select></td></tr>
                         <tr><td><br/></td></tr>
+                        <tr><td class="left-column">Approved Event : </td><td>
+                        <?php
+                                echo '<form method = "POST">';
+                                echo '<select name="event_id" id="event_id">';
+                                $sql2 = "select * from Event where Event_Approval_Status = 'YES'";
+                                $prep = $conn->prepare($sql2);
+                                $prep -> execute();
+                                $files = $prep->fetchAll();
+                                echo "<option value=0>None Selected</option>";
+                                foreach($files as $row2)
+                                {
+                                    echo "<option value='";
+                                    echo $row2['Event_ID'];
+                                    echo "'>";
+                                    echo $row2['Event_Name'];
+                                    echo "</option>";
+                                }
+                                echo '</select>';
+                                echo '</form>';
+                            ?>
+                        <br/></td></tr>
+                        <tr><td><br/></td></tr>
                         </table>
                     </div>
                 </div>
@@ -75,40 +97,44 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
+                        <tr><td><br/></td></tr>
+                        <tr><td><br/></td></tr>
                         <tr><td><h4><b><u>Include:</u></b></h4></td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="performer" checked>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="performer" id="performer" checked>
                             <label class="form-check-label" for="performer">Performer(s)&nbsp;&nbsp;</label>
                         </td>
                             <td>
-                            <input class="form-check-input" type="checkbox" value="" id="location" checked>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="location" id="location" checked>
                             <label class="form-check-label" for="location">Location</label>
                         </td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="status" checked>
-                            <label class="form-check-label" for="status">Status</label>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="agent" id="agent" checked>
+                            <label class="form-check-label" for="status">Agent</label>
                         </td>
                             <td>
-                            <input class="form-check-input" type="checkbox" value="" id="capacity" checked>
-                            <label class="form-check-label" for="capacity">Seating Capacity</label>
+                            <input class="form-check-input" type="checkbox" value="" name="vendor" id="vendor" checked>
+                            <label class="form-check-label" for="vendor">Event Vendors</label>
+
                         </td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="date" checked>
-                            <label class="form-check-label" for="date">Event Date</label>
-                        </td>
-                        <td>
-                            <input class="form-check-input" type="checkbox" value="" id="time" checked>
-                            <label class="form-check-label" for="time">Event Time</label>
-                        </td></tr>
-                        <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" id="manager" checked>
+                            <input class="form-check-input" type="checkbox" value="" name="manager" id="manager" checked>
                             <label class="form-check-label" for="manager">Event Manager&nbsp;&nbsp;</label>
                         </td>
                         <td>
-                            <input class="form-check-input" type="checkbox" value="" id="vendor" checked>
-                            <label class="form-check-label" for="vendor">Event Vendors</label>
+                            <input class="form-check-input" type="checkbox" value="" name="capacity" id="capacity" checked>
+                            <label class="form-check-label" for="capacity">Seating Capacity</label>
+                        </td></tr>
+                        <tr><td>
+                            <input class="form-check-input" type="checkbox" value="" name="manager" id="manager" checked>
+                            <label class="form-check-label" for="manager">Event Manager&nbsp;&nbsp;</label>
+                        </td>
+                        <td>
+                            <input class="form-check-input" type="checkbox" value="" name="capacity" id="capacity" checked>
+                            <label class="form-check-label" for="capacity">Seating Capacity</label>
                         </td></tr>
                         <tr><td><br/><br/></td></tr>
+                        <!-- <tr><td><br/></td></tr> -->
                         </table>
                     </div>
                 </div>

@@ -90,37 +90,45 @@
                                     </div>
                                 </div>
                         </fieldset>
-                        <fieldset class="col-xs-6" style="display:inline-block;">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                    <legend>Event Location</legend>
-                                        <table>
-                                        <tr><td><br/></td></tr>
-                                        <tr><td class="left-column">Location Name : </td><td>Arena</td></tr>
-                                        <tr><td class="left-column">Location Address : </td><td>150 Straight Ln,Dekalb,IL,USA,60115</td></tr>
-                                        <tr><td class="left-column">Location Capacity : </td><td>150</td></tr>
-                                        <tr><td class="left-column">Location Comments : </td><td></td></tr>
-                                        <tr><td><br/></td></tr>
-                                        </table>
-                                    </div>
-                                </div>
-                        </fieldset>
-                        <br/>
-                        <fieldset class="col-xs-6" style="display:inline-block;">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                    <legend>Performing Artist</legend>
-                                        <table>
-                                        <tr><td class="left-column">Artist Name : </td><td>AFI</td></tr>
-                                        <tr><td class="left-column">Artist Address : </td><td>#3 123 Rock Blvd,Dekalb,IL,USA,60115</td></tr>
-                                        <tr><td class="left-column">Artist Rate : </td><td>$150.00</td></tr>
-                                        <tr><td class="left-column">Artist Phone : </td><td>1234567890</td></tr>
-                                        <tr><td class="left-column">Artist Email : </td><td>afi@afi.com</td></tr>
-                                        <tr><td class="left-column">Artist Comments : </td><td></td></tr>
-                                        </table>
-                                    </div>
-                                </div>
-                        </fieldset>
+                        <?php 
+                        if(isset($_POST['performer']) && $_POST['performer'] == "Yes")
+                        {
+                            echo '<fieldset class="col-xs-6" style="display:inline-block;">';
+                            echo '<div class="panel panel-default">';
+                            echo '<div class="panel-body">';
+                            echo '<legend>Event Location</legend>';
+                            echo '<table>';
+                            echo '<tr><td><br/></td></tr>';
+                            echo '<tr><td class="left-column">Location Name : </td><td>Arena</td></tr>';
+                            echo '<tr><td class="left-column">Location Address : </td><td>150 Straight Ln,Dekalb,IL,USA,60115</td></tr>';
+                            echo '<tr><td class="left-column">Location Capacity : </td><td>150</td></tr>';
+                            echo '<tr><td class="left-column">Location Comments : </td><td></td></tr>';
+                            echo '<tr><td><br/></td></tr>';
+                            echo '</table>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</fieldset>';
+                            echo '<br/>';
+                        }?>
+                        <?php 
+                        if(isset($_POST['performer']) && $_POST['performer'] == "Yes")
+                        {
+                            echo '<fieldset class="col-xs-6" style="display:inline-block;">';
+                            echo '<div class="panel panel-default">';
+                            echo '<div class="panel-body">';
+                            echo '<legend>Performing Artist</legend>';
+                            echo ' <table>';
+                            echo ' <tr><td class="left-column">Artist Name : </td><td>AFI</td></tr>';
+                            echo '<tr><td class="left-column">Artist Address : </td><td>#3 123 Rock Blvd,Dekalb,IL,USA,60115</td></tr>';
+                            echo '<tr><td class="left-column">Artist Rate : </td><td>$150.00</td></tr>';
+                            echo '<tr><td class="left-column">Artist Phone : </td><td>1234567890</td></tr>';
+                            echo '<tr><td class="left-column">Artist Email : </td><td>afi@afi.com</td></tr>';
+                            echo '<tr><td class="left-column">Artist Comments : </td><td></td></tr>';
+                            echo '</table>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '</fieldset>';
+                        }?>
                         <fieldset class="col-xs-6" style="display:inline-block;">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
