@@ -59,7 +59,7 @@
             }
             $Art_id = $_POST['artist_id'];
             $event_performer = "";
-            //$sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
+            // $sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
             if($_POST['artist_id'])
             {
                 $sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
@@ -70,7 +70,7 @@
             }
             $ven_id = $_POST['vendor_id'];
             $event_vendor = "";
-            //$sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
+            // $sqlperform= "select * from Artist_Record where Artist_ID = $Art_id";
             if($_POST['vendor_id'])
             {
                 $sqlven= "select * from Vendor where Vendor_ID = $ven_id";
@@ -139,7 +139,7 @@
                             
                                 echo '<form method = "POST">';
                                 echo '<select name="artist_id" id="artist_id" style="width: 150px;">';
-                                $sql2 = "select * from Artist_Record";
+                                $sql2 = "select * from Artist_Record order by Artist_FName";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();
@@ -166,7 +166,7 @@
                                 
                                     
                                     echo '<select name="loc_id" id="loc_id" style="width: 150px;">';
-                                    $sql3 = "select * from Location";
+                                    $sql3 = "select * from Location order by Location_Name";
                                     $prep1 = $conn->prepare($sql3);
                                     $prep1 -> execute();
                                     $files1 = $prep1->fetchAll();
@@ -185,7 +185,7 @@
                         <tr><td class="left-column">Vendor: </td><td style="text-align:right">
                                 <?php
                                     echo '<select name="vendor_id" id="loc_id" style="width: 150px;">';
-                                            $sql4 = "select * from Vendor";
+                                            $sql4 = "select * from Vendor order by Vendor_Name";
                                             $prep2 = $conn->prepare($sql4);
                                             $prep2 -> execute();
                                             $files2 = $prep2->fetchAll();

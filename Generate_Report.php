@@ -71,7 +71,7 @@
                         <?php
                                 echo '<form method = "POST">';
                                 echo '<select name="event_id" id="event_id">';
-                                $sql2 = "select * from Event where Event_Approval_Status = 'YES'";
+                                $sql2 = "select * from Event where Event_Approval_Status = 'YES' order by Event_Name";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();
@@ -98,7 +98,7 @@
                     <div class="panel-body">
                         <table>
                         <tr><td><br/><br/><br/></td></tr>
-                        <tr><td><h4><b><u>Include:</u></b></h4></td></tr>
+                        <tr><td><h4><b><u><font size="5">Include:</font></u></b></h4></td></tr>
                         <tr><td>
                             <input class="form-check-input" type="checkbox" value="Yes" name="performer" id="performer" checked>
                             <label class="form-check-label" for="performer">Performer(s)&nbsp;&nbsp;</label>

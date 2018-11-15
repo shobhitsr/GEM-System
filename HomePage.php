@@ -68,7 +68,7 @@
                             
                                 echo '<form method = "POST">';
                                 echo '<select name="event_id" id="event_id">';
-                                $sql2 = "select * from Event where Event_Approval_Status = 'NO'";
+                                $sql2 = "select * from Event where Event_Approval_Status = 'NO' order by Event_Name";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();

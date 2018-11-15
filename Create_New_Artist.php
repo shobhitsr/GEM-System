@@ -161,7 +161,7 @@
                             require ('conn.php');
                                 echo '<form method = "GET">';
                                 echo '<select name="Agent_id" id="Agent_id" style="width: 150px">';
-                                $sql2 = "select * from Agent";
+                                $sql2 = "select * from Agent order by Agent_FName";
                                 $prep = $conn->prepare($sql2);
                                 $prep -> execute();
                                 $files = $prep->fetchAll();
