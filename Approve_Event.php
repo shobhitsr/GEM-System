@@ -59,7 +59,12 @@
             }
         }
     ?>
-    
+    <script>
+        function goBack() 
+        {
+            window.history.back();
+        }
+    </script>
     
     <center>
         <h1>Approve Event</h1>
@@ -419,7 +424,7 @@
                         </center>
                     </div>
                 </div>
-            <button style="float:left; font-size: 20px;" onclick="window.location.href='HomePage.php'">Exit</button>
+            <button style="float:left; font-size: 20px;" onclick="goBack()">Exit</button>
             <?php 
                 $id = intval($_GET['evt_id']);
                 echo '<input type="hidden" name="event_id" value="';

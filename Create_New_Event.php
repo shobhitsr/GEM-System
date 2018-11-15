@@ -82,7 +82,7 @@
             
             $event_capacity = $_POST['capacity'];
             $event_date = $_POST['date'];
-            $event_time = $_POST['time'];
+            $event_time = $_POST['starttime'];
             $event_notes = $_POST['comments'];
             $sql="insert into Event
                                 (
@@ -132,6 +132,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
+                        <tr><td><br/></td></tr>
                         <tr><td class="left-column">Event Name: </td><td style="text-align:right"><input type="text" name="name" style="width: 150px;"></td></tr>
                         <tr><td class="left-column">Band/Artist(s) : </td><td style="text-align:right">
                             
@@ -211,7 +212,8 @@
                     <div class="panel-body">
                         <table>
                         <tr><td class="left-column">Event Date : </td><td><input type="date" name="date" style="width: 150px"></td></tr>
-                        <tr><td class="left-column">Event Time : </td><td><input type="time" name="time" style="width: 150px"></td></tr>
+                        <tr><td class="left-column">Event Start Time : </td><td><input type="time" name="starttime" style="width: 150px"></td></tr>
+                        <tr><td class="left-column">Event End Time : </td><td><input type="time" name="endtime" style="width: 150px"></td></tr>
                         <!-- make this dropdown -->
                         <tr><td class="left-column">Seating Capacity: </td><td style="text-align:right"><input type="text" name="capacity" style="width: 150px"></td></tr>
                         </table>
