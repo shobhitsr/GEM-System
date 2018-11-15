@@ -97,8 +97,7 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <table>
-                        <tr><td><br/></td></tr>
-                        <tr><td><br/></td></tr>
+                        <tr><td><br/><br/><br/></td></tr>
                         <tr><td><h4><b><u>Include:</u></b></h4></td></tr>
                         <tr><td>
                             <input class="form-check-input" type="checkbox" value="Yes" name="performer" id="performer" checked>
@@ -113,24 +112,16 @@
                             <label class="form-check-label" for="status">Agent</label>
                         </td>
                             <td>
-                            <input class="form-check-input" type="checkbox" value="" name="vendor" id="vendor" checked>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="vendor" id="vendor" checked>
                             <label class="form-check-label" for="vendor">Event Vendors</label>
 
                         </td></tr>
                         <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" name="manager" id="manager" checked>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="manager" id="manager" checked>
                             <label class="form-check-label" for="manager">Event Manager&nbsp;&nbsp;</label>
                         </td>
                         <td>
-                            <input class="form-check-input" type="checkbox" value="" name="capacity" id="capacity" checked>
-                            <label class="form-check-label" for="capacity">Seating Capacity</label>
-                        </td></tr>
-                        <tr><td>
-                            <input class="form-check-input" type="checkbox" value="" name="manager" id="manager" checked>
-                            <label class="form-check-label" for="manager">Event Manager&nbsp;&nbsp;</label>
-                        </td>
-                        <td>
-                            <input class="form-check-input" type="checkbox" value="" name="capacity" id="capacity" checked>
+                            <input class="form-check-input" type="checkbox" value="Yes" name="capacity" id="capacity" checked>
                             <label class="form-check-label" for="capacity">Seating Capacity</label>
                         </td></tr>
                         <tr><td><br/><br/></td></tr>

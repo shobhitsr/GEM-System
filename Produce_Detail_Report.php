@@ -75,7 +75,8 @@
                     <div class="panel-body">
                         <legend>GEMS System<br/>1425 W. Lincoln Hwy<br/>Dekalb, IL 60115</legend>
                     
-                        <center><fieldset class="col-xs-6" style="display:inline-block;">
+                        <center>
+                        <fieldset class="col-xs-6" style="display:inline-block;">
                                 <div class="panel panel-default">
                                     <div class="panel-body">
                                     <legend>Event Details</legend>
@@ -91,7 +92,7 @@
                                 </div>
                         </fieldset>
                         <?php 
-                        if(isset($_POST['performer']) && $_POST['performer'] == "Yes")
+                        if(isset($_POST['location']) && $_POST['location'] == "Yes")
                         {
                             echo '<fieldset class="col-xs-6" style="display:inline-block;">';
                             echo '<div class="panel panel-default">';
@@ -129,36 +130,45 @@
                             echo '</div>';
                             echo '</fieldset>';
                         }?>
-                        <fieldset class="col-xs-6" style="display:inline-block;">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                    <legend>Artist's Agent</legend>
-                                        <table>
-                                        <tr><td><br/></td></tr>
-                                        <tr><td class="left-column">Agent's Name : </td><td>James Bond</td></tr>
-                                        <tr><td class="left-column">Agent Phone : </td><td>1234567890</td></tr>
-                                        <tr><td class="left-column">Agent Address : </td><td>123 Ace Ln,Dekalb,IL,USA,60115</td></tr>
-                                        <tr><td class="left-column">Agent Comments : </td><td></td></tr>
-                                        <tr><td><br/></td></tr>
-                                        </table>
-                                    </div>
-                                </div>
-                        </fieldset>
-                        <br/><br/>
-                        <fieldset class="col-xs-6" style="display:inline-block;">
-                                <div class="panel panel-default">
-                                    <div class="panel-body">
-                                    <legend>Event Vendors</legend>
-                                        <table>
-                                        <tr><td class="left-column">Vendor Name : </td><td>Rental Company</td></tr>
-                                        <tr><td class="left-column">Vendor Category : </td><td>rental</td></tr>
-                                        <tr><td class="left-column">Vendor Email : </td><td>rentalcompany@gmail.com</td></tr>
-                                        <tr><td class="left-column">Vendor Comments : </td><td>Good Vendor</td></tr>
-                                        <!-- repeat the above 4 for all vendors? -->
-                                        </table>
-                                    </div>
-                                </div>
-                        </fieldset>
+                        <?php
+                        if(isset($_POST['agent']) && $_POST['agent'] == "Yes")
+                        {
+                            echo '<fieldset class="col-xs-6" style="display:inline-block;">';
+                            echo '      <div class="panel panel-default">';
+                            echo '            <div class="panel-body">';
+                            echo "            <legend>Artist's Agent</legend>";
+                            echo '                <table>';
+                            echo '                <tr><td><br/></td></tr>';
+                            echo '                <tr><td class="left-column">Agent Name : </td><td>James Bond</td></tr>';
+                            echo '                <tr><td class="left-column">Agent Phone : </td><td>1234567890</td></tr>';
+                            echo '                <tr><td class="left-column">Agent Address : </td><td>123 Ace Ln,Dekalb,IL,USA,60115</td></tr>';
+                            echo '                <tr><td class="left-column">Agent Comments : </td><td></td></tr>';
+                            echo '                <tr><td><br/></td></tr>';
+                            echo '               </table>';
+                            echo '            </div>';
+                            echo '        </div>';
+                            echo '</fieldset>';
+                            echo '<br/><br/>';
+                        }?>
+                        <?php
+                        if(isset($_POST['vendor']) && $_POST['vendor'] == "Yes")
+                        {
+                            echo '<fieldset class="col-xs-6" style="display:inline-block;">';
+                            echo '        <div class="panel panel-default">';
+                            echo '            <div class="panel-body">';
+                            echo '            <legend>Event Vendors</legend>';
+                            echo '                <table>';
+                            echo '                <tr><td><br/></td></tr>';
+                            echo '                <tr><td class="left-column">Vendor Name : </td><td>Rental Company</td></tr>';
+                            echo '                <tr><td class="left-column">Vendor Category : </td><td>rental</td></tr>';
+                            echo '                <tr><td class="left-column">Vendor Email : </td><td>rentalcompany@gmail.com</td></tr>';
+                            echo '                <tr><td class="left-column">Vendor Comments : </td><td>Good Vendor</td></tr>';
+                            echo '                <tr><td><br/></td></tr>';
+                            echo '                </table>';
+                            echo '            </div>';
+                            echo '        </div>';
+                            echo '</fieldset>';
+                        }?>
                         </center>
                     </div>
                 </div>

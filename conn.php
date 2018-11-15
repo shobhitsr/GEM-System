@@ -1,9 +1,9 @@
 <?PHP
 //name this conn.php
-$host = 'courses';
-$user = 'z1808617';
-$password='1995Aug24';
-$db = 'z1808617';
+$host = 'localhost';
+$user = 'root';
+$password='';
+$db = 'gem-system';
 $options = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');
 $conn = new PDO("mysql:host=$host;dbname=$db",$user,$password);
 try
